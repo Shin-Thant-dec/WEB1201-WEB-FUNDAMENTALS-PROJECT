@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!--This link is used to get the social media icon from fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/team.css">
+
+</head>
+<body>
+    <!--the navbar cannnot be inside the header, bcos the position of is sticky and -->
+    <!--If put inside the header, then the navbar will be stacked inside the header, so navbar dont follow if u srcoll down the screen-->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="homepage.html.html">
+                <img src="images/Logo3.0.png" class="logo" alt="Homepage" >
+            </a>
+            <button class="navbar-toggle">
+                <!--The button prepared for small screeen size-->
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="team.html" class="active">Our Team</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="heading_section">
+            <h1>Our team</h1>
+            <p>--  The people behind the build  --</p><br>
+            <p>This site was designed and built by a 4-person student team for WEB1201/WEB2014.</p>
+            <p>Each member owned specific pages and features, listed below with their individual portfolio.</p>
+        </section>
+
+        <div class="folder">
+            <div class="folder_tab_bar">
+                <button class="folder_tab active" data-target="member1">Member1</button>
+                <button class="folder_tab" data-target="member2">Member2</button>
+                <button class="folder_tab" data-target="member3">Member3</button>
+                <button class="folder_tab" data-target="member4">Member4</button>
+            </div>
+
+            <div class="folder_body">
+                <div class="member_panel active" id="member1">
+                    <img class="selfie" src="#" alt="member">
+                    <div class="member_details">
+                        <h2 class="name">Name</h2>
+                        <p class="role">Role</p>
+                        <ul class="contributions">
+                            <li>Task</li>
+                            <li>Task</li>
+                            <li>Task</li>
+                        </ul>
+                        <a href="#" class="portfolio_button">View Portfolio</a>
+                    </div>
+                </div>
+
+                <div class="member_panel" id="member2">
+                    <img class="selfie" src="#" alt="member">
+                    <div class="member_details">
+                        <h2 class="name">Name</h2>
+                        <p class="role">Role</p>
+                        <ul class="contributions">
+                            <li>Task</li>
+                            <li>Task</li>
+                            <li>Task</li>
+                        </ul>
+                        <a href="#" class="portfolio_button">View Portfolio</a>
+                    </div>
+                </div>
+
+                <div class="member_panel" id="member3">
+                    <img class="selfie" src="#" alt="member">
+                    <div class="member_details">
+                        <h2 class="name">Name</h2>
+                        <p class="role">Role</p>
+                        <ul class="contributions">
+                            <li>Task</li>
+                            <li>Task</li>
+                            <li>Task</li>
+                        </ul>
+                        <a href="#" class="portfolio_button">View Portfolio</a>
+                    </div>
+                </div>
+
+                <div class="member_panel" id="member4">
+                    <img class="selfie" src="#" alt="member">
+                    <div class="member_details">
+                        <h2 class="name">Name</h2>
+                        <p class="role">Role</p>
+                        <ul class="contributions">
+                            <li>Task</li>
+                            <li>Task</li>
+                            <li>Task</li>
+                        </ul>
+                        <a href="#" class="portfolio_button">View Portfolio</a>
+                    </div>
+                </div>
+    </main>
+
+    
+    <!--footer-->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="homepage.html"><img src="images/Logo3.0.png" class="logo"></a>
+                <p>Quality Care, Naturally Gentle.</p>
+            </div>
+            <div class="footer_block">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer_block">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Book Now</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer_block">
+                <h4>Reach to Us</h4>
+                <ul>
+                    <li><a href="#">📍 Johor Bahru</a></li>
+                    <li><a href="#">📞 +60 12-345 6789</a></li>
+                    <li><a href="#">🕒 Mon-Sat: 9am - 6pm</a></li>
+                </ul>
+                <div class="footer_socials">
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+                <span>&copy; 2026 Paw Paw Grooming. All rights reserved.</p>
+        </div>
+        
+    </footer>  
+    <script src="javascript/nav.js"></script>
+    <script src="javascript/team.js"></script>
+</body>
+</html>
