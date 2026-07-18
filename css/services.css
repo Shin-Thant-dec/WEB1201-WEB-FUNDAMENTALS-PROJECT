@@ -1,124 +1,144 @@
-.services_section{
-    max-width: 1300px;
-    margin: 0 auto;
+/* ==========================================================================
+   SERVICES.CSS — styles used only on services.html
+   ========================================================================== */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
-.title{
-    margin: 50px 0;
+/* ---- Grooming tag card (see home.css for the notch/perforation explanation) ---- */
+.tag-card {
+  position: relative;
+  background-color: #FBF8F2;
+  border: 1px solid #CFDBC9;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px -14px rgba(34, 48, 39, 0.35);
+  padding: 32px 24px 24px 40px;
+}
+.tag-card::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -11px;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  background-color: #EAF0E6;
+  border: 1px solid #CFDBC9;
+  border-radius: 50%;
+}
+.tag-card::after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  left: 14px;
+  border-left: 2px dashed #CFDBC9;
+}
+.tag-card .stamp {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 24px;
+}
+.tag-card .price {
+  font-family: 'Space Mono', 'Courier New', monospace;
+  font-size: 24px;
+  color: #B23A5B;
+}
+.tag-card .price .duration {
+  font-size: 14px;
+  color: #4C5B51;
+}
+.tag-card .category-pill {
+  display: inline-block;
+  font-family: 'Space Mono', 'Courier New', monospace;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: #E3EFEB;
+  color: #3F7A6B;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 12px;
 }
 
-.title h1{
-    font-size: 50px;
+/* ---- Catalogue toolbar (search / filter / sort) ---- */
+.catalogue-toolbar {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FBF8F2;
+  border: 1px solid #CFDBC9;
+  border-radius: 14px;
+  padding: 16px 24px;
+  margin-bottom: 32px;
 }
-/* The title part*/
-.title span{
-    color: #4C5B51;
+.catalogue-toolbar .field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
-
-/* The service toolbar*/
-.catalogue_toolbar{
-    background-color: #FBF8F2;
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid #CFDBC9;
-    border-radius: 14px;
-    padding: 16px 24px;
-    margin-bottom: 32px;
+.catalogue-toolbar label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #4C5B51;
 }
-
-.catalogue_toolbar .field_group{
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+.catalogue-toolbar input,
+.catalogue-toolbar select {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1.5px solid #CFDBC9;
+  background-color: #FFFFFF;
+  color: #223027;
+  font-family: 'Work Sans', Arial, sans-serif;
+  font-size: 15px;
 }
-
-.catalogue_toolbar label{
-    font-size: 1.2em;
+.catalogue-count {
+  font-family: 'Space Mono', 'Courier New', monospace;
+  font-size: 14px;
+  color: #4C5B51;
 }
-
-.catalogue_toolbar input,
-.catalogue_toolbar select{
-    padding: 10px 12px;
-    border-radius: 6px;
-    border: 1.5px solid #CFDBC9;
-    background-color: white;
-    color: #223027;
-}
-
-.catalogue_count{
-    color:#4C5B51;
-}
-
-/* catalogue_card */
-.catalogue_card{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 24px;
+.empty-state {
+  text-align: center;
+  padding: 72px 0;
+  color: #4C5B51;
 }
 
-.card{
-    position: relative;
-    background-color: #FBF8F2;
-    border: 1px solid #CFDBC9;
-    border-radius: 14px;
-    box-shadow: 0 10px 24px -14px rgba(34, 48, 39, 0.35);
-    padding: 32px 24px 24px 40px;
+/* ---- Dark theme overrides ---- */
+[data-theme='dark'] .tag-card {
+  background-color: #1F2E24;
+  border-color: #33453A;
+}
+[data-theme='dark'] .tag-card::before {
+  background-color: #16231C;
+  border-color: #33453A;
+}
+[data-theme='dark'] .tag-card::after {
+  border-left-color: #33453A;
+}
+[data-theme='dark'] .catalogue-toolbar {
+  background-color: #1F2E24;
+  border-color: #33453A;
+}
+[data-theme='dark'] .catalogue-toolbar input,
+[data-theme='dark'] .catalogue-toolbar select {
+  background-color: #16231C;
+  color: #E8F0E5;
+  border-color: #33453A;
 }
 
-.card span{
-    display: inline-block;
-    font-family: 'Space Mono', 'Courier New', monospace;
-    font-size: 12px;
-    letter-spacing: 1px;
-    background-color: #E3EFEB;
-    color: #3F7A6B;
-    padding: 4px 12px;
-    border-radius: 999px;
-    margin-bottom: 12px;
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
 }
-
-.card h4{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.5em;
-}
-
-.card p{
-    font-size: 20px;
-    color: #3F7A6B;
-}
-
-.card li{
-    list-style-type: none;
-    font-size: 15px;
-    margin-bottom: 5px;
-    color: #3F7A6B;
-}
-
-.booking_button{
-    text-align: left;
-    margin-top: 20px;
-}
-
-.booking_button a{
-    border: 2px solid #3F7A6B;
-    border-radius: 999px;
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px 20px;
-    color: #3F7A6B;
-}
-
-.booking_button a:hover{
-    background-color: #3F7A6B;
-    color: #CFDBC9;
-}
-
-/* Mobile screen */
-@media (max-width: 768px){
-    .catalogue_card{
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 600px) {
+  .card-grid { grid-template-columns: 1fr; }
+  .catalogue-toolbar { flex-direction: column; align-items: stretch; }
+  .catalogue-toolbar .field-group { width: 100%; }
 }
