@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!--This link is used to get the social media icon from fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/services.css">
+
+</head>
+<body>
+    <!--the navbar cannnot be inside the header, bcos the position of is sticky and -->
+    <!--If put inside the header, then the navbar will be stacked inside the header, so navbar dont follow if u srcoll down the screen-->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="homepage.html.html">
+                <img src="images/Logo3.0.png" class="logo" alt="Homepage" >
+            </a>
+            <button class="navbar-toggle">
+                <!--The button prepared for small screeen size-->
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="team.html">Our Team</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="services_section">
+            <div class="title">
+                <span>FULL CATALOGUE</span>
+                <h1>Services &amp; Pricing</h1>
+                <p>Filter by category, sort by name or price, or search by keyword — the list updates instantly, no page reload needed.</p>
+            </div>
+
+            <div class="catalogue_toolbar">
+                <div class="field_group">
+                    <label for="search">Search</label>
+                    <input type="search" id="search" placeholder="e.g. nail, spa, cat...">
+                </div>
+                <div class="field_group">
+                    <label for="category">Category</label>
+                    <select id="category">
+                        <option value="all">All categories</option>
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                        <option value="add-ob">Add-on</option>
+                    </select>
+                </div>
+                <div class="field_group">
+                    <label for="sort">Sort by</label>
+                    <select id="sort">
+                        <option value="name">Name (A-Z)</option>
+                        <option value="price_asc">Price (low to high)</option>
+                        <option value="price_desc">Price (high to low)</option>
+                    </select>
+                </div>
+                <span class="catalogue_count">10 services</span>
+            </div>
+            
+
+            The services provided can be rendered using javascript
+            <div class="catalogue_card">
+                <div>
+                    <h4>🐱 Basic Cat Grooming</h4>
+                    <span>From RM40 - RM 60</span>
+                    <ul>
+                        <li>🛁 Bath with cat-friendly shampoo</li>
+                        <li>💨 Blow dry</li>
+                        <li>🐾 Paw pad trimming</li>
+                        <li>✂️ Nail trimming</li>
+                        <li>👀 Face trimming</li>
+                        <li>🌸 Light pet perfume</li>
+                    </ul>
+                    <div>
+                        Book Now
+                    </div>
+                </div>
+                <div>second card</div>
+                <div>third card</div>
+                <div>fourth card</div>
+                <div>fifth card</div>
+                <div>sixth card</div>
+            </div>
+        </section>
+        
+    </main>
+
+    
+    <!--footer-->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="homepage.html"><img src="images/Logo3.0.png" class="logo"></a>
+                <p>Quality Care, Naturally Gentle.</p>
+            </div>
+            <div class="footer_block">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer_block">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Book Now</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer_block">
+                <h4>Reach to Us</h4>
+                <ul>
+                    <li><a href="#">📍 Johor Bahru</a></li>
+                    <li><a href="#">📞 +60 12-345 6789</a></li>
+                    <li><a href="#">🕒 Mon-Sat: 9am - 6pm</a></li>
+                </ul>
+                <div class="footer_socials">
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+                <span>&copy; 2026 Paw Paw Grooming. All rights reserved.</p>
+        </div>
+        
+    </footer>   
+</body>
+<script src="javascript/nav.js"></script>
+</html>
