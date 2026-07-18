@@ -1,0 +1,73 @@
+.services_section{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.title{
+    margin: 50px 0;
+}
+
+.title h1{
+    font-size: 50px;
+}
+/* The title part*/
+.title span{
+    color: #4C5B51;
+}
+
+/* The service toolbar*/
+.catalogue_toolbar{
+    background-color: #FBF8F2;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #CFDBC9;
+    border-radius: 14px;
+    padding: 16px 24px;
+    margin-bottom: 32px;
+}
+
+.catalogue_toolbar .field_group{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.catalogue_toolbar label{
+    font-size: 1.2em;
+}
+
+.catalogue_toolbar input,
+.catalogue_toolbar select{
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1.5px solid #CFDBC9;
+    background-color: white;
+    color: #223027;
+}
+
+.catalogue_count{
+    color:#4C5B51;
+}
+
+/* catalogue_card */
+.catalogue_card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+.catalogue_card div{
+    background-color: #CFDBC9;
+    border-radius: 14px;
+}
+
+
+/* Mobile screen */
+@media (max-width: 768px){
+    .catalogue_card{
+        grid-template-columns: 1fr;
+    }
+}
