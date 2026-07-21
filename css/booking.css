@@ -1,0 +1,201 @@
+.booking_container {
+    background-color: #FBF8F2;
+    border: 1px solid #CFDBC9;
+    border-radius: 26px;
+    padding: 48px;
+    max-width: 640px;
+    margin: 0 auto 50px auto;
+}
+
+.booking_section{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.title{
+    margin: 50px 0;
+}
+
+.title h1{
+    font-size: 50px;
+}
+
+/* ---- Form fields ---- */
+.field {
+    margin-bottom: 24px;
+}
+.field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+.field input,
+.field select {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 6px;
+    border: 1.5px solid #CFDBC9;
+    background-color: #FFFFFF;
+    color: #223027;
+    font-size: 16px;
+}
+.field input:focus,
+.field select:focus {
+    border-color: #B23A5B;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+}
+
+legend {
+    font-size: 24px;
+    padding: 0;
+    margin-bottom: 16px;
+    color: #223027;
+}
+
+.create_account_block{
+    text-align: center;
+    margin: 40px 0;
+}
+
+.create_account_block a{
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.create_account_block a:hover{
+    transform: scale(1.1);
+}
+/* ---- Progress trail ---- */
+.progress_trail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    position: relative;
+}
+
+.progress_trail::before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    right: 22px;
+    height: 3px;
+    background-color: #CFDBC9;
+    z-index: 0;
+}
+
+.progress_trail .trail_fill {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    height: 3px;
+    background-color: #B23A5B;
+    z-index: 1;
+    width: 0%;
+}
+
+.trail_step {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.trail_step .trail_logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #FBF8F2;
+    border: 2px solid #CFDBC9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+
+.trail_step.active .trail_logo,
+.trail_step.done .trail_logo {
+    border-color: #B23A5B;
+    background-color: #B23A5B;
+}
+
+.trail_step span.trail_label {
+    font-size: 12px;
+    color: #4C5B51;
+}
+
+.trail_step.active span.trail_label {
+    color: #B23A5B;
+    font-weight: 600;
+}
+/*  this is used to combine three step together to a single card
+.form_step {
+    display: none;
+}*/
+.form_step.active {
+    display: block;
+}
+
+.form_nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.form_success {
+    text-align: center;
+    padding: 48px 24px;
+}
+.form_success.active {
+    display: block;
+}
+
+.booking_button{
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    border-radius: 999px;
+    padding: 14px 28px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #EFD8C4;
+    color: #75563A;
+}
+
+.booking_button:hover{
+    background-color: #75563A;
+    color: #EFD8C4;
+}
+
+.homepage_button{
+    margin: 16px auto;
+    border: none;
+    border-radius: 999px;
+    padding: 14px 28px;
+    display: inline-block;
+    background-color: #EFD8C4;
+}
+
+.homepage_button a{
+    text-decoration: none;
+    color: #75563A;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.homepage_button:hover{
+    background-color: #75563A;
+}
+
+.homepage_button a:hover{
+    color: #EFD8C4;
+}
