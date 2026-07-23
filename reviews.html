@@ -45,19 +45,8 @@
             <h1>Reviews</h1>
             <p>See what pet owners have to say, or leave your own review below — it appears in the list instantly.</p>
         
-            <div class="cards_container">
-                <div class="card">
-                    <p>★★★★</p>
-                    <p>This is very good</p>
-                    <span>Alan     |   29/05/2027</span>
-                </div>
-
-                <div class="card">
-                    <p>★★★★</p>
-                    <p>This is very good</p>
-                    <span>Alan     |   29/05/2027</span>
-                </div>
-
+            <div class="cards_container" data-review-list aria-live="polite">
+                <!-- These reviews card will be rendered by js/reviews.js -->
                 <div class="card">
                     <p>★★★★</p>
                     <p>This is very good</p>
@@ -70,32 +59,31 @@
 
             <div class="comment_form">
                 <h2>Leave a review</h2>
-                <form>
+                <form data-review-form novalidate>
                     <div class="field">
                         <label for="clientName">Your name</label>
                         <input type="text" id="clientName" name="clientName" required>
                     </div>
 
                     <div class="field">
-                        <label for="clientEmail">Your email</label>
-                        <input type="email" id="clientEmail" name="clientEmail" required>
-                    </div>
-
-                    <div class="field">
-                        <p>Rating</p>
-                        <div class="star_rating">
-                            <button type="button">★</button>
-                            <button type="button">★</button>
-                            <button type="button">★</button>
-                            <button type="button">★</button>
-                            <button type="button">★</button>
+                        <h4>Rating</h4>
+                        <div class="star_rating" data-star-picker role="radiogroup" aria-labelledby="rating-label">
+                            <button type="button" role="radio" aria-checked="false" aria-label="1 star">&#9733;</button>
+                            <button type="button" role="radio" aria-checked="false" aria-label="2 star">&#9733;</button>
+                            <button type="button" role="radio" aria-checked="false" aria-label="3 star">&#9733;</button>
+                            <button type="button" role="radio" aria-checked="false" aria-label="4 star">&#9733;</button>
+                            <button type="button" role="radio" aria-checked="false" aria-label="5 star">&#9733;</button>
                         </div>
+                        <input type="hidden" name="reviewRating" value="0">
                     </div>
 
                     <div class="field">
                         <label for="reviewText">Your Review</label>
-                        <textarea id="reviewText" name="reviewText" rows="4" required minlength="10"></textarea>
+                        <textarea id="reviewText" name="reviewText" rows="4" minlength="10"></textarea>
+                        <p class="hint" data-char-count>0 characters</p>
                     </div>
+
+                    <p class="error-message hidden" data-review-error role="alert"></p>
 
                     <button type="submit" class="review_submit_button">Submit Review</button>
                 </form>
@@ -132,7 +120,7 @@
             <div class="footer_block">
                 <h4>Reach to Us</h4>
                 <ul>
-                    <li><a href="#">&#128205; Sunway Univeristy</a></li>
+                    <li><a href="https://maps.app.goo.gl/HX3k16Foxzozwnq57">&#128205; Sunway Univeristy</a></li>
                     <li><a href="#">&#128222; +60 12-345 6789</a></li>
                     <li><a href="#">&#128343; Mon-Sat: 9am - 6pm</a></li>
                 </ul>
@@ -148,6 +136,8 @@
         </div>
         
     </footer>   
+    <script src="javascript/nav.js"></script>
+    <script src="javascript/reviews.js"></script>
 </body>
-<script src="javascript/nav.js"></script>
+
 </html>
