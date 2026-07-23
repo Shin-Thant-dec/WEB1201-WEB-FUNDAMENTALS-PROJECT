@@ -51,7 +51,7 @@
     margin-bottom: 24px;
 }
 
-.field label, .field p{
+.field label, .field h4{
     display: block;
     font-weight: 600;
     margin-bottom: 8px;
@@ -110,4 +110,23 @@
 .review_submit_button:hover{
     background-color: #75563A;
     color: #EFD8C4;
+}
+
+/*=========Responsive deisgn=======*/
+/*====   Tablet   ===== */
+@media (max-width: 1024px) {
+    .cards_container { 
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+/*====== Mobile ======*/
+@media (max-width: 768px) {
+    .cards_container { 
+        grid-template-columns: 1fr; 
+    }
+
+    .comment_form { 
+        padding: 32px 24px;
+    }
 }
