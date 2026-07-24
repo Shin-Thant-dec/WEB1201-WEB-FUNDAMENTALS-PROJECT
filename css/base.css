@@ -9,6 +9,13 @@ body{
     font-family: 'Outfit', Helvetica;
 }
 
+h1, h2, h3, h4, h5{
+    color: #4d2604;
+}
+
+p, span{
+    color: #4C5B51;
+}
 /*navigation css*/
 .navbar{ 
     display: flex;
@@ -33,20 +40,21 @@ body{
 }
 
 .logo{
-    height:70px;
+    height: 70px;
+    height:3em;
 }
 
 .navbar-container .navbar-menu {
     display:flex;
     text-align: center;
-    gap: 1.5rem;
+    gap: 1em;
     list-style: none;
 }
 
 .navbar-container .navbar-menu li a{
     text-decoration: none;
     color:#75563A;
-    font-size: 1.3rem;
+    font-size: 1.3em;
     font-weight: 500;
     padding: 3px 20px;
     border: 2px solid transparent;
@@ -81,8 +89,8 @@ body{
 
 /*footer css*/
 .site-footer{
-    background-color: #f1dac5;
-    color: #4d2604;
+    background-color: #EFD8C4;
+    color: #75563A;
     padding: 48px 24px 24px;
 }
 
@@ -99,7 +107,7 @@ body{
     margin: 0;
     font-size: 1.3em;
     line-height: 1.5;
-    color: #4d2604;
+    color: #75563A;
     max-width:320px;
 }
 
@@ -119,7 +127,7 @@ body{
 }
 
 .footer_block a{
-    color: #4d2604;
+    color: #75563A;
     text-decoration: none;
     font-size: 1.1em;
     transition: all 0.2s ease;
@@ -127,7 +135,7 @@ body{
 }
 
 .footer_block a:hover{
-    color: #be8a5c;
+    color: #35200f;
 }
 
 .footer-bottom {
@@ -149,13 +157,13 @@ body{
 }
 
 .footer_socials a{
-    color: #4d2604;
+    color: #75563A;
 }
 
 /*footer css end*/
 
 /* Responsive Style */
-/* ---- Tablet: Between 768px and 1023px---- */
+/* ---- Tablet---- */
 @media (max-width: 1024px){
     .navbar{
         backdrop-filter: none;
@@ -214,7 +222,6 @@ body{
     }
     
     .navbar{ 
-        height: auto;
         padding: 24px 20px;
         height: auto;
         background-color: transparent;
@@ -227,6 +234,7 @@ body{
         border-radius: 999px;
         padding: 12px 30px;
         box-shadow: 0 1px 4px black;
+        height: auto;
     }
 
     .navbar-container .navbar-menu {
@@ -237,7 +245,7 @@ body{
         flex-wrap: nowrap;
         align-items: center;
         text-align: center;
-        height: auto;
+        height: 60px;
         width: auto;
         padding: 10px 22px;
         box-shadow: 0 0 0;
