@@ -1,8 +1,8 @@
 
 .heading_section{
     max-width: 1100px;
-    margin: 20px auto 80px auto;
-    padding: 32px;  /*top right bottom left*/
+    margin: 20px auto;
+    padding: 32px; 
 }
 
 .heading_section h1{
@@ -13,132 +13,90 @@
     font-size: 15px;
 }
 
-.folder{
-    max-width: 720px;
-    margin: 0 auto 20px auto;
+.team{
+    width:90%;
+    max-width:1100px;
+    margin:60px auto;
 }
 
-.folder_tab_bar{
-    display: flex;
-    gap: 6px;
+.member{
+    display:flex;
+    align-items:center;
+    gap:50px;
+    background:#FFF4E6;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    margin-bottom:40px;
 }
 
-.folder_tab{
-    background-color: brown;
-    color: white;
-    border: none;
-    padding: 14px 26px;
-    font-size: 0.95em;
-    font-weight: 600;
+.member img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    flex-shrink:0;
+    background-color: white;
+}
+
+.info{
+    flex:1;
+}
+
+.info h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.info h4{
+    margin-bottom:15px;
+}
+
+.info p{
+    margin-bottom:25px;
+}
+
+.info a{
+    display:inline-block;
+    padding:12px 25px;
+    border: 1px solid #4d2604;
+    color: #4d2604;;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
     font-family: 'Courier New', Courier, monospace;
-    cursor: pointer;
-    border-radius: 12px 12px 0 0;
-    position: relative;
-    top: 4px;
-    transition: all 0.2s ease;
-}
-
-.folder_tab:hover{
-    background-color: blanchedalmond;
-}
-
-.folder_tab.active{
-    background-color: blanchedalmond;
-    top:0;
-    box-shadow: 0 -2px 6px rgba(0,0,0,0.08);
-}
-
-.folder_body{
-    border-radius: 0 14px 14px 14px;
-    padding: 36px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    min-height: 340px;
-    background-color: blanchedalmond;
-}
-
-.member_panel{
-    display: none;  /*this default status of folder panel*/
-    align-items: flex-start;
-    gap: 28px;
-}
-
-.member_panel.active{
-    display: flex;
-}
-
-.member_panel .selfie{
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    background-color: aliceblue;
-}
-
-.member_panel .member_details{
-    flex: 1;
-}
-
-.member_panel .position{
-    font-size: 0.88em;
     font-weight: 600;
-    color: brown;
-    margin: 0 0 18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
-.member_panel .contributions{
-    list-style: none;
-    margin: 0 0 24px;
-    padding: 0;
+.info a:hover{
+    background-color: #4d2604;
+    color: #fff;
 }
 
-.member_panel .contributions li{
-    font-size: 0.9em;
-    line-height: 1.6;
-    padding-left: 20px;
-    position: relative;
+.reverse{
+    flex-direction:row-reverse;
 }
 
-.member_panel .portfolio_button{
-    display: inline-block;
-    padding: 10px 24px;
-    background-color:rgb(169, 127, 71);
-    border-radius: 6px;
-    font-size: 0.85em;
-    font-weight: 600;
+.reverse .info{
+    text-align:right;
 }
 
-.member_panel .portfolio_button:hover{
-    background-color: black;
-}
+@media (max-width:768px){
 
-/*=======Mobile========*/
-@media(max-width: 768px){
-    main{
-        padding: 16px;
+    .member,
+    .reverse{
+        flex-direction:column;
+        text-align:center;
     }
 
-    .folder_tab_bar {
-        padding-left: 0;
-        overflow-x: auto;   /*controls horizontal overflow*/
+    .reverse .info{
+        text-align:center;
     }
- 
-    .folder_tab {
-        padding: 12px 18px;
-        font-size: 0.85rem;
+
+    .member img{
+        width:170px;
+        height:170px;
     }
- 
-    .folder_body {
-        padding: 24px;
-        border-radius: 0 0 14px 14px;  /*top-left top-right bottom-right bottom-left*/
-    }
- 
-    .member_panel {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 16px;
-    }
- 
-    .member_panel .contributions {
-        text-align: left;
-    }
+
 }
