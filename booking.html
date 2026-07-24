@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!--This link is used to get the social media icon from fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/booking.css">
+
+</head>
+<body>
+    <!--the navbar cannnot be inside the header, bcos the position of is sticky and -->
+    <!--If put inside the header, then the navbar will be stacked inside the header, so navbar dont follow if u srcoll down the screen-->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="homepage.html.html">
+                <img src="images/Logo3.0.png" class="logo" alt="Homepage" >
+            </a>
+            <button class="navbar-toggle">
+                <!--The button prepared for small screeen size-->
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="booking.html" class="active">Book Now</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="team.html">Our Team</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="booking_section">
+            <div class="title">
+                <span>3 quick steps to</span>
+                <h1>Book your pet's appoinment</h1>
+            </div>
+
+            <div class="booking_container">
+                <div class="progress_trail">
+                    <div class="trail_fill"></div>
+                    <div class="trail_step active">     <!--use js to change the status of each trail_step-->
+                        <span class="trail_logo">&#128062;</span>
+                        <span class="trail_label">Owner</span>
+                    </div>
+                    <div class="trail_step">
+                        <span class="trail_logo">&#128062;</span>
+                        <span class="trail_label">Pet</span>
+                    </div>
+                    <div class="trail_step">
+                        <span class="trail_logo">&#128062;</span>
+                        <span class="trail_label">Service</span>
+                    </div>
+                </div>
+
+                <form>
+                    <!-- Step 1: Owner details -->
+                     <fieldset class="form_step active">    <!--use js to change each form_step-->
+                        <legend>Owner Details</legend>
+
+                        <div class="field">
+                            <label for="ownerEmail">Email Address</label>
+                            <input type="email" id="ownerEmail" name="ownerEmail" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="ownerPassword">Password</label>
+                            <input type="password" id="ownerPassword" required>
+                        </div>
+
+                        <div class="form_nav">
+                            <button type="button" class="booking_button">Next: Pet Details</button>
+                        </div>
+
+                        <div class="create_account_block">
+                            <span>Don't have account?</span>
+                            <a href="createAccout.html">Sign Up</a>
+                        </div>
+                     </fieldset>
+
+                     <!-- Step 2: Pet details-->
+                    <fieldset class="form_step">
+                        <legend>About your pet</legend>
+                        <div class="field">
+                            <label for="petName">Pet's Name</label>
+                            <input type="text" id="petName" name="petName" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="petType">Pet Type</label>
+                            <select id="petType" name="petType" required>
+                                <option value="">Choose one</option>
+                                <option value="dog">Dog</option>
+                                <option value="cat">Cat</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="petName">Breed</label>
+                            <input type="text" id="petBreed" name="petBreed" placeholder="e.g. Mixed, Poodle, Tabby">
+                        </div>
+
+                        <div class="form_nav">
+                            <button type="button" class="booking_button">Back: Owner Details</button>
+                            <button type="button" class="booking_button">Next: Service Booking</button>
+                        </div>
+                        
+                    </fieldset>
+
+                    <!-- Step 3: Service Booking-->
+                     <fieldset class="form_step">
+                        <legend>Service &amp; Appointment Time</legend>
+                        <div class="field">
+                            <label for="serviceChoice">Service</label>
+                            <select id="serviceChoice" name="serviceChoice" required>
+                                <option value="">Choose a service</option>
+                                <option value="">Basic Wash</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="appointmentDate">Preferred Date</label>
+                            <input type="date" id="appointmentDate" name="appointmentDate" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="appointmentTime">Preferred Time</label>
+                            <select id="appointmentTime" name="appointmentTime" required>
+                                <option value="">Choose A Slot</option>
+                                <option value="9:00 AM">9:00 AM</option>
+                                <option value="11:00 AM">11:00 AM</option>
+                                <option value="1:00 PM">1:00 PM</option>
+                                <option value="3:00 PM">3:00 PM</option>
+                            </select>
+                        </div>
+
+                        <div class="form_nav">
+                            <button type="button" class="booking_button">Back: Pet Details</button>
+                            <button type="submit" class="booking_button">Next: Confirm Booking</button>
+                        </div>
+                     </fieldset>
+                </form>
+
+                <div class="form_success">
+                    <h2>Booking received!</h2>
+                    <p>The booking information will be sent to your email</p>
+                    <div class="homepage_button">
+                        <a href="homepage.html">Back to home</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+
+    
+    <!--footer-->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="homepage.html"><img src="images/Logo3.0.png" class="logo"></a>
+                <p>Quality Care, Naturally Gentle.</p>
+            </div>
+            <div class="footer_block">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer_block">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="booking.html">Book Now</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer_block">
+                <h4>Reach to Us</h4>
+                <ul>
+                    <li><a href="https://maps.app.goo.gl/HX3k16Foxzozwnq57">&#128205; Sunway Univeristy</a></li>
+                    <li><a>&#128222; +60 12-345 6789</a></li>
+                    <li><a>&#128343; Mon-Sat: 9am - 6pm</a></li>
+                </ul>
+                <div class="footer_socials">
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+                <span>&copy; 2026 Paw Paw Grooming. All rights reserved.</p>
+        </div>
+        
+    </footer>   
+</body>
+<script src="javascript/nav.js"></script>
+</html>
