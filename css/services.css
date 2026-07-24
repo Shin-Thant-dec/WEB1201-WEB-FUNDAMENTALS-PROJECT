@@ -54,7 +54,7 @@
 }
 
 /* catalogue_card */
-.catalogue_card{
+#catalogue_card{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
@@ -62,7 +62,6 @@
 
 .card{
     position: relative;
-    background-image: url(/images/service_card_background.jpeg);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -127,9 +126,15 @@
     color: #CFDBC9;
 }
 
+.service_title {
+    color: black;
+}
+
 /* Mobile screen */
 @media (max-width: 768px){
     .catalogue_card{
         grid-template-columns: 1fr;
     }
 }
+
+

@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/services.css">
-
 </head>
 <body>
     <!--the navbar cannnot be inside the header, bcos the position of is sticky and -->
@@ -49,7 +48,7 @@
             <div class="catalogue_toolbar">
                 <div class="field_group">
                     <label for="search">Search</label>
-                    <input type="search" id="search" placeholder="e.g. nail, spa, cat...">
+                    <input type="text" id="search" placeholder="e.g. nail, spa, cat...">
                 </div>
                 <div class="field_group">
                     <label for="category">Category</label>
@@ -57,13 +56,14 @@
                         <option value="all">All categories</option>
                         <option value="dog">Dog</option>
                         <option value="cat">Cat</option>
-                        <option value="add-ob">Add-on</option>
+                        <option value="add-on">Add-on</option>
                     </select>
                 </div>
                 <div class="field_group">
                     <label for="sort">Sort by</label>
                     <select id="sort">
                         <option value="name">Name (A-Z)</option>
+                        <option value="name">Name (Z-A)</option>
                         <option value="price_asc">Price (low to high)</option>
                         <option value="price_desc">Price (high to low)</option>
                     </select>
@@ -71,12 +71,10 @@
                 <span class="catalogue_count">11 services</span>
             </div>
             
-
-            The services provided can be rendered using javascript
-            <div class="catalogue_card">
-                <div class="card">
+            <div id="catalogue_card">
+                <!-- <div class="card">
                     <span>Cat</span>
-                    <h4>Basic Cat Grooming 🛁</h4>
+                    <h4 class="service_title">Basic Cat Grooming 🛁</h4>
                     <p class="service_description">A gentle essential grooming session designed to keep your cat clean, fresh, and comfortable.</p>
                     <p class="price">From RM40 - RM 60</p>
                     <div class="booking_button">
@@ -86,7 +84,7 @@
 
                 <div class="card">
                     <span>Cat</span>
-                    <h4>Full Cat Grooming Package ✂️</h4>
+                    <h4 class="service_title">Full Cat Grooming Package ✂️</h4>
                     <p class="service_description">A complete grooming service combining basic care with haircut styling, hygiene trimming, and full coat maintenance.</p>
                     <p class="price">From RM70 – RM150</p>
                     <div class="booking_button">
@@ -96,7 +94,7 @@
 
                 <div class="card">
                     <span>Cat</span>
-                    <h4>Premium Cat Grooming Package ✨</h4>
+                    <h4 class="service_title">Premium Cat Grooming Package ✨</h4>
                     <p class="service_description">A luxury grooming experience featuring premium products, conditioning treatments, dental care, paw care, and a complimentary accessory.</p>
                     <p class="price">From RM100 – RM180</p>
                     <div class="booking_button">
@@ -106,7 +104,7 @@
 
                 <div class="card">
                     <span>Dog</span>
-                    <h4>Basic Dog Grooming 🛁</h4>
+                    <h4 class="service_title">Basic Dog Grooming 🛁</h4>
                     <p class="service_description">A refreshing grooming service including premium shampoo bath, drying, nail care, paw trimming, face trimming, and fragrance finish.</p>
                     <p class="price">From RM45 – RM70</p>
                     <div class="booking_button">
@@ -116,7 +114,7 @@
 
                 <div class="card">
                     <span>Dog</span>
-                    <h4>Full Dog Grooming Package ✂️</h4>
+                    <h4 class="service_title">Full Dog Grooming Package ✂️</h4>
                     <p class="service_description">A complete grooming package with haircut styling, sanitary trimming, brushing, and coat maintenance for a cleaner and healthier look.</p>
                     <p class="price">From RM80 – RM180</p>
                     <div class="booking_button">
@@ -126,7 +124,7 @@
                 
                 <div class="card">
                     <span>Add-on</span>
-                    <h4>Ear Cleaning 👂</h4>
+                    <h4 class="service_title">Ear Cleaning 👂</h4>
                     <p class="service_description">A spa-level treatment with deep cleansing, conditioning, dental care, paw treatment, and luxury finishing touches.</p>
                     <p class="price">From RM10</p>
                     <div class="booking_button">
@@ -135,7 +133,7 @@
                 </div>
                 <div class="card">
                     <span>Add-on</span>
-                    <h4>Teeth Brushing 🦷</h4>
+                    <h4 class="service_title">Teeth Brushing 🦷</h4>
                     <p class="service_description">Helps reduce plaque buildup, freshens breath, and supports better oral hygiene.</p>
                     <p class="price">From RM15</p>
                     <div class="booking_button">
@@ -144,40 +142,40 @@
                 </div>
                 <div class="card">
                     <span>Add-on</span>
-                    <h4>Sanitary Trim ✂️</h4>
+                    <h4 class="service_title">Sanitary Trim ✂️</h4>
                     <p class="service_description">Carefully trims fur around sanitary areas to keep your pet clean and hygienic.</p>
-                    <p class="price">From RM15++</p>
+                    <p class="price">From RM15 - RM45</p>
                     <div class="booking_button">
                         <a href="booking.html">Book Now</a>
                     </div>
                 </div>
                 <div class="card">
                     <span>Add-on</span>
-                    <h4>De-Shedding Treatment 🪮 </h4>
+                    <h4 class="service_title">De-Shedding Treatment 🪮 </h4>
                     <p class="service_description">Removes loose undercoat and excess fur to reduce shedding and keep the coat healthy.</p>
-                    <p class="price">From RM30++</p>
+                    <p class="price">From RM30 - RM50</p>
                     <div class="booking_button">
                         <a href="booking.html">Book Now</a>
                     </div>
                 </div>
                 <div class="card">
                     <span>Add-on</span>
-                    <h4>Flea & Tick Treatment 🫧 </h4>
+                    <h4 class="service_title">Flea & Tick Treatment 🫧 </h4>
                     <p class="service_description">Helps eliminate fleas and ticks while keeping your pet's skin clean and comfortable.</p>
-                    <p class="price">From RM30++</p>
+                    <p class="price">From RM30 - RM50</p>
                     <div class="booking_button">
                         <a href="booking.html">Book Now</a>
                     </div>
                 </div>
                 <div class="card">
                     <span>Add-on</span>
-                    <h4>Coat Conditioning 💆</h4>
+                    <h4 class="service_title">Coat Conditioning 💆</h4>
                     <p class="service_description">Nourishes and moisturizes the coat, leaving it soft, smooth, and shiny.</p>
-                    <p class="price">From RM25++</p>
+                    <p class="price">From RM25 - RM40</p>
                     <div class="booking_button">
                         <a href="booking.html">Book Now</a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
         
