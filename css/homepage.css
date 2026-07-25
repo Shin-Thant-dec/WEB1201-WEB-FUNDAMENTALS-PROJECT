@@ -4,6 +4,7 @@
     --homepage-section2-card:#dfe3ce;
     --homepage-section2-card-hover: rgb(255, 213, 220);
     --homepage-section3-block:#FFF4E6;
+    --homepage-section3-button: #4d2604;
 
 }
 
@@ -13,6 +14,7 @@
     --homepage-section2-card: rgb(201, 129, 80);
     --homepage-section2-card-hover: rgb(255, 176, 97);
     --homepage-section3-block:rgb(198, 111, 53);
+    --homepage-section3-button: rgb(198, 111, 53);
 }
 
 /*-----------------Section 1 start--------------*/
@@ -283,7 +285,6 @@
     margin-top: 40px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    color: #4C5B51;
 }
 
 .section3_button_container{
@@ -294,8 +295,8 @@
     text-align: center;
     display: inline-block;
     padding: 12px 28px;
-    border: 1px solid #4d2604;
-    color: #4d2604;
+    border: 1px solid var(--homepage-section3-button);
+    color: var(--homepage-section3-button);
     text-decoration: none;
     border-radius: 6px;
     font-size: 0.95rem;
@@ -307,7 +308,7 @@
 }
 
 .section3_button:hover{
-    background-color: #4d2604;
+    background-color: var(--homepage-section3-button);
     color: #fff;
 }
 /*                      Section 3 End                      */
