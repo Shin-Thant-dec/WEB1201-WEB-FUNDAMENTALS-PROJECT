@@ -128,7 +128,7 @@
 
         var nameField = form.querySelector('[name="clientName"]');
         var errorEl = form.querySelector('[data-review-error]');
-        var texttextField = form.querySelector('[name="reviewText"]');
+        var textField = form.querySelector('[name="reviewText"]');
         var reviews;
 
         if (currentRating === 0 || nameField.value.trim() === '') {
