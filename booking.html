@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/booking.css">
-
+ 
 </head>
 <body>
     <!--the navbar cannnot be inside the header, bcos the position of is sticky and -->
@@ -43,14 +43,14 @@
             </ul>
         </div>
     </nav>
-
+ 
     <main>
         <section class="booking_section">
             <div class="title">
                 <span>3 quick steps to</span>
                 <h1>Book your pet's appoinment</h1>
             </div>
-
+ 
             <div class="booking_container">
                 <div class="progress_trail">
                     <div class="trail_fill"></div>
@@ -67,32 +67,37 @@
                         <span class="trail_label">Service</span>
                     </div>
                 </div>
-
+ 
                 <form>
                     <!-- Step 1: Owner details -->
                      <fieldset class="form_step active">    <!--use js to change each form_step-->
                         <legend>Owner Details</legend>
-
+                        <p class="step_hint">Please log in with your account to continue booking.</p>
+ 
                         <div class="field">
                             <label for="ownerEmail">Email Address</label>
                             <input type="email" id="ownerEmail" name="ownerEmail" required>
                         </div>
-
+ 
                         <div class="field">
                             <label for="ownerPassword">Password</label>
                             <input type="password" id="ownerPassword" required>
+                            <p class="demo_info">Demo account: pawpawtest@gmail.com</p>
+                            <p class="demo_info">Password: pawpawtest123</p>
                         </div>
-
+ 
+                        <p class="step_error" id="step1Error"></p>
+ 
                         <div class="form_nav">
-                            <button type="button" class="booking_button">Next: Pet Details</button>
+                            <button type="button" class="booking_button" id="step1Next">Next: Pet Details</button>
                         </div>
-
+ 
                         <div class="create_account_block">
                             <span>Don't have account?</span>
-                            <a href="createAccout.html">Sign Up</a>
+                            <a href="signup.html">Sign Up</a>
                         </div>
                      </fieldset>
-
+ 
                      <!-- Step 2: Pet details-->
                     <fieldset class="form_step">
                         <legend>About your pet</legend>
@@ -100,7 +105,7 @@
                             <label for="petName">Pet's Name</label>
                             <input type="text" id="petName" name="petName" required>
                         </div>
-
+ 
                         <div class="field">
                             <label for="petType">Pet Type</label>
                             <select id="petType" name="petType" required>
@@ -110,19 +115,21 @@
                                 <option value="other">Other</option>
                             </select>
                         </div>
-
+ 
                         <div class="field">
                             <label for="petName">Breed</label>
                             <input type="text" id="petBreed" name="petBreed" placeholder="e.g. Mixed, Poodle, Tabby">
                         </div>
-
+ 
+                        <p class="step_error" id="step2Error"></p>
+ 
                         <div class="form_nav">
-                            <button type="button" class="booking_button">Back: Owner Details</button>
-                            <button type="button" class="booking_button">Next: Service Booking</button>
+                            <button type="button" class="booking_button" id="step2Back">Back: Owner Details</button>
+                            <button type="button" class="booking_button" id="step2Next">Next: Service Booking</button>
                         </div>
                         
                     </fieldset>
-
+ 
                     <!-- Step 3: Service Booking-->
                      <fieldset class="form_step">
                         <legend>Service &amp; Appointment Time</legend>
@@ -130,19 +137,19 @@
                             <label for="serviceChoice">Service</label>
                             <select id="serviceChoice" name="serviceChoice" required>
                                 <option value="">Choose a service</option>
-                                <option value="">Basic Wash</option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
+                                <option value="Basic Grooming">Basic Grooming</option>
+                                <option value="Full Grooming Package">Full Grooming Package</option>
+                                <option value="Premium Grooming Package">Premium Grooming Package</option>
+                                <option value="Ear Cleaning">Ear Cleaning</option>
+                                <option value="De-Shedding Treatment">De-Shedding Treatment</option>
                             </select>
                         </div>
-
+ 
                         <div class="field">
                             <label for="appointmentDate">Preferred Date</label>
                             <input type="date" id="appointmentDate" name="appointmentDate" required>
                         </div>
-
+ 
                         <div class="field">
                             <label for="appointmentTime">Preferred Time</label>
                             <select id="appointmentTime" name="appointmentTime" required>
@@ -153,14 +160,16 @@
                                 <option value="3:00 PM">3:00 PM</option>
                             </select>
                         </div>
-
+ 
+                        <p class="step_error" id="step3Error"></p>
+ 
                         <div class="form_nav">
-                            <button type="button" class="booking_button">Back: Pet Details</button>
+                            <button type="button" class="booking_button" id="step3Back">Back: Pet Details</button>
                             <button type="submit" class="booking_button">Next: Confirm Booking</button>
                         </div>
                      </fieldset>
                 </form>
-
+ 
                 <div class="form_success">
                     <h2>Booking received!</h2>
                     <p>The booking information will be sent to your email</p>
@@ -170,10 +179,10 @@
                 </div>
             </div>
         </section>
-
+ 
         
     </main>
-
+ 
     
     <!--footer-->
     <footer class="site-footer">
@@ -218,6 +227,9 @@
         </div>
         
     </footer>   
+    <script src="javascript/nav.js"></script>
+    <script src="javascript/auth.js"></script>
+    <script src="javascript/booking.js"></script>
 </body>
-<script src="javascript/nav.js"></script>
 </html>
+ 
