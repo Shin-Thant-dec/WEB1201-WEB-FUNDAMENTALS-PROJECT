@@ -16,14 +16,13 @@ const services = [
 // this search servies by id
 const search = document.getElementById('search');
 const categoryFilter = document.getElementById('category');
+const sortFilter = document.getElementById('sort');
 const container = document.getElementById('catalogue_card');
 
 function filterServices() {
     const searchInput = search.value.toLowerCase().trim();
     const category = categoryFilter.value;
-    console.log("1. Search Term:", searchInput);        // Debug 1
-    console.log("2. Selected Category:", category); 
-
+    const sortOption = sortFilter.value;
 
     // like for loop this filters through services array one by one
     let filteredServices = services.filter(service => {
@@ -33,8 +32,18 @@ function filterServices() {
         return matchSearches && matchCategory;
     });
 
+    if (sortOption === 'name a-z') {
+        filteredServices.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sortOption === 'name z- a') {
+        filteredServices.sort((a,b) => b.name.localeCompare(a.name));
+    } else if (sortOption === 'price_asc') {
+        filteredServices.sort((a,b) => a.minPrice - b.minPrice);
+    } else if (sortOption === 'price_desc') {
+        filteredServices.sort((a, b) => b.minPrice - a.minPrice);
+    }
+
     if (filteredServices.length === 0) {
-        container.innerHTML = `<p>No servies found.</p>`;
+        container.innerHTML = `<p>No services found.</p>`;
     } else {
         container.innerHTML = filteredServices.map(service => `
                 <div class="card">
@@ -45,14 +54,11 @@ function filterServices() {
                 </div>
         `).join('');
     }
-
-    console.log("hello world")
-    console.log("totale services", services.length);
-    console.log(container)
 }
 
 search.addEventListener('input', filterServices);
 categoryFilter.addEventListener('change', filterServices);
+sortFilter.addEventListener('change', filterServices);
 
 filterServices();
 
