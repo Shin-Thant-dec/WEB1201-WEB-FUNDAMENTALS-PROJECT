@@ -1,6 +1,20 @@
+/*light mode color theme*/
+:root{
+    --card-bg:#FBF8F2;
+    --card-border:#CFDBC9;
+    --text:#4d2604;
+}
+
+/*dark mode color theme*/
+.darkmode{
+    --card-bg: #342A22;
+    --card-border:#6f655a;
+    --text:#F4D7B7;
+}
+
 .booking_container {
-    background-color: #FBF8F2;
-    border: 1px solid #CFDBC9;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
     border-radius: 26px;
     padding: 48px;
     max-width: 640px;
@@ -28,13 +42,14 @@
     font-weight: 600;
     margin-bottom: 8px;
     font-size: 14px;
+    color: var(--text);
 }
 .field input,
 .field select {
     width: 100%;
     padding: 12px 16px;
     border-radius: 6px;
-    border: 1.5px solid #CFDBC9;
+    border: 1.5px solid var(--card-border);
     background-color: #FFFFFF;
     color: #223027;
     font-size: 16px;
@@ -54,7 +69,7 @@ legend {
     font-size: 24px;
     padding: 0;
     margin-bottom: 16px;
-    color: #223027;
+    color: var(--text);
 }
 
 .create_account_block{
@@ -189,7 +204,7 @@ legend {
     text-decoration: none;
     color: #75563A;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .homepage_button:hover{
