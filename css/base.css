@@ -298,11 +298,12 @@ p, span, li{
         flex-wrap: nowrap;
         align-items: center;
         text-align: center;
-        height: 60px;
+        height: 70px;
         width: auto;
         padding: 10px 22px;
         box-shadow: 0 0 0;
-        overflow: scroll;
+        overflow-x: scroll;
+        overflow-y: hidden;
         gap: 0; /*control the space between elements*/
     }
 
