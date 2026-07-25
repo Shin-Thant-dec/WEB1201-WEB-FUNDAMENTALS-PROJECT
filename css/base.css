@@ -1,3 +1,51 @@
+/*light mode color theme*/
+:root{
+    --bg-color:#FFF8F1;
+    --navbar-footer-bg-color: #EFD8C4;
+    --navbar-footer-text: #75563A;
+    --navbar-footer-text-hover: #35200f;
+    --heading-color:#4d2604;
+    --text-color: #4C5B51;
+}
+
+/*dark mode color theme*/
+.darkmode{
+    --bg-color: #1E1B18;
+    --navbar-footer-bg-color: #342A22;
+    --navbar-footer-text: #E7D7C6;
+    --navbar-footer-text-hover: #FFF8F1;
+    --heading-color: #F4D7B7;
+    --text-color: #D0C5B8;
+}
+
+/*theme switch button*/
+#theme-switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--navbar-footer-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#theme-switch p{
+    font-size: 2em;
+}
+
+#theme-switch p:last-child{
+    display: none;
+}
+
+.darkmode #theme-switch p:first-child{
+    display: none;
+}
+
+.darkmode #theme-switch p:last-child{
+    display: block;
+}
+
 *{
     margin: 0;  /*This is used to make sure everything dont have space*/
     padding: 0;
@@ -5,7 +53,7 @@
 }
 body{
     min-height:100vh;
-    background-color: #FFF8F1;
+    background-color: var(--bg-color);
     font-family: 'Outfit', Helvetica;
 }
 
@@ -14,11 +62,11 @@ main{
 }
 
 h1, h2, h3, h4, h5{
-    color: #4d2604;
+    color: var(--heading-color);
 }
 
-p, span{
-    color: #4C5B51;
+p, span, li{
+    color: var(--text-color);
 }
 /*navigation css*/
 .navbar{ 
@@ -30,7 +78,7 @@ p, span{
     position:sticky;
     top:0;
     background: transparent;
-    background-color: #EFD8C4;
+    background-color: var(--navbar-footer-bg-color);
     z-index: 9999;
 }
 
@@ -53,11 +101,12 @@ p, span{
     text-align: center;
     gap: 1em;
     list-style: none;
+    align-items: center;
 }
 
 .navbar-container .navbar-menu li a{
     text-decoration: none;
-    color:#75563A;
+    color: var(--navbar-footer-text);
     font-size: 1.3em;
     font-weight: 500;
     padding: 3px 20px;
@@ -68,8 +117,8 @@ p, span{
 
 .navbar-container .navbar-menu li a:hover,
 .navbar-container .navbar-menu li a.active{
-    color:#35200f;
-    border-bottom: 2px solid #35200f;
+    color:var(--navbar-footer-text-hover);
+    border-bottom: 2px solid var(--navbar-footer-text-hover);
 }
 
 .navbar-toggle{
@@ -85,7 +134,7 @@ p, span{
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    background: #75563A;
+    background: var(--navbar-footer-text);
     transition: all 0.3s ease-in-out;
 
 }
@@ -93,8 +142,8 @@ p, span{
 
 /*footer css*/
 .site-footer{
-    background-color: #EFD8C4;
-    color: #75563A;
+    background-color: var(--navbar-footer-bg-color);
+    color: var(--navbar-footer-text);
     padding: 48px 24px 24px;
 }
 
@@ -111,7 +160,7 @@ p, span{
     margin: 0;
     font-size: 1.3em;
     line-height: 1.5;
-    color: #75563A;
+    color: var(--navbar-footer-text);
     max-width:320px;
 }
 
@@ -131,7 +180,7 @@ p, span{
 }
 
 .footer_block a{
-    color: #75563A;
+    color: var(--navbar-footer-text);
     text-decoration: none;
     font-size: 1.1em;
     transition: all 0.2s ease;
@@ -139,13 +188,13 @@ p, span{
 }
 
 .footer_block a:hover{
-    color: #35200f;
+    color: var(--navbar-footer-text-hover);
 }
 
 .footer-bottom {
     margin: 40px auto 0;
     padding-top: 20px;  
-    border-top: 1px solid #333;
+    border-top: 1px solid var(--navbar-footer-text);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -161,7 +210,7 @@ p, span{
 }
 
 .footer_socials a{
-    color: #75563A;
+    color: var(--navbar-footer-text);
 }
 
 /*footer css end*/
@@ -185,7 +234,7 @@ p, span{
         right:0;
         padding: 5rem 1.5rem;
         box-shadow: 0 10px 10px rgba(0,0,0,0.5);
-        background-color: #EFD8C4;
+        background-color: var(--navbar-footer-bg-color);
     }
 
     .navbar-container .navbar-menu.active{
@@ -233,7 +282,7 @@ p, span{
 
     .navbar-container {
         justify-content: space-between;
-        background-color: #EFD8C4;
+        background-color: var(--navbar-footer-bg-color);
         border: 1px solid black;
         border-radius: 999px;
         padding: 12px 30px;
@@ -249,11 +298,12 @@ p, span{
         flex-wrap: nowrap;
         align-items: center;
         text-align: center;
-        height: 60px;
+        height: 70px;
         width: auto;
         padding: 10px 22px;
         box-shadow: 0 0 0;
-        overflow: scroll;
+        overflow-x: scroll;
+        overflow-y: hidden;
         gap: 0; /*control the space between elements*/
     }
 
@@ -268,8 +318,8 @@ p, span{
 
     .navbar-container .navbar-menu li a:hover,
     .navbar-container .navbar-menu li a:active{
-        color: wheat;
-        background-color: #35200f;
+        color: var(--navbar-footer-bg-color);
+        background-color: var(--navbar-footer-text-hover);
         border-bottom: none;
     }
 }
