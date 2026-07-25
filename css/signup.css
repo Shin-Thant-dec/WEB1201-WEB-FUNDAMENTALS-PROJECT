@@ -1,0 +1,6 @@
+/* not working at the moment*/
+/* supposed to make the input border red if the validation is incorrect. */
+.incorrect input {
+    border: 2px solid red;      /* Draw a red border around the input */
+    background-color: #ffe6e6;  /* Make the background slightly pink */
+}
