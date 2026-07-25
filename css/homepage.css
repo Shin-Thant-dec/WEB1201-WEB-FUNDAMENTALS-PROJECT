@@ -1,3 +1,20 @@
+/*light mode color theme*/
+:root{
+    /*homepage*/
+    --homepage-section2-card:#dfe3ce;
+    --homepage-section2-card-hover: rgb(255, 213, 220);
+    --homepage-section3-block:#FFF4E6;
+
+}
+
+/*dark mode color theme*/
+.darkmode{
+    /*homepage*/
+    --homepage-section2-card: rgb(201, 129, 80);
+    --homepage-section2-card-hover: rgb(255, 176, 97);
+    --homepage-section3-block:rgb(198, 111, 53);
+}
+
 /*-----------------Section 1 start--------------*/
 .section1 {
     max-width: 1400px;
@@ -21,14 +38,12 @@
 .section1-text h2{
     margin-left:20px;
     font-size:20px;
-    color: #4d2604;
     margin-top:50px;
     margin-bottom:0px;
 }
 
 .section1-text h1{
     font-size:50px;
-    color: #4d2604;
     margin-top:0px;
     margin-bottom:0px;
 }
@@ -46,7 +61,6 @@
     margin-bottom: 12px;
     font-size: 1.2em;
     line-height: 1.5;
-    color: #4C5B51;
 }
  
 .section1-text li::before {
@@ -102,7 +116,6 @@
     text-align: center;
     font-size: 60px;
     margin-top: 100px;
-    color: #4d2604;
 }
 
 .section2_card_container{
@@ -148,10 +161,9 @@
     text-align: center;
     padding: 10px;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
-    background-color: #dfe3ce;
+    background-color: var(--homepage-section2-card);
     border-radius: 12px;
-    border: 1px solid #C8A77D;
-    color: #4C5B51;
+    border: 1px solid va;
 }
 
 .card_front, .card_back{
@@ -204,7 +216,7 @@
 .card:hover{
     box-shadow: 0 6px 10px rgb(238, 153, 153);
     z-index: 3;
-    background-color: rgb(255, 213, 220);
+    background-color: var(--homepage-section2-card-hover);
 }
 
 /*----------------Section 2 END !!!!----------------*/
@@ -222,7 +234,6 @@
     font-size: 50px;
     margin-bottom: 70px;
     border-bottom: 2px solid brown;
-    color: #4d2604;
 }
 
 .section3_block_cotainer{
@@ -235,7 +246,7 @@
 }
 
 .section3_block{
-    background-color: #FFF4E6;
+    background-color: var(--homepage-section3-block);
     border: 1px dotted #C8A77D;
     width: 250px;
     padding: 18px;
@@ -305,14 +316,12 @@
 .section4_title{
     text-align: center;
     font-size: 60px;
-    color: #4d2604;
 }
 
 .section4_sub{
     text-align: center;
     font-size: 24px;
     margin-bottom: 40px;
-    color: #4C5B51;
 }
 
 .slideshow{
