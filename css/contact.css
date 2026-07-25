@@ -1,6 +1,17 @@
 main{
     margin-top: 50px;
 }
+
+/*light mode color theme*/
+:root{
+    --text-color: #4C5B51;
+}
+
+/*dark mode color theme*/
+.darkmode{
+    --text-color: #D0C5B8;
+}
+
 /*contact*/
 .contact_container{
     display:block;
@@ -15,7 +26,7 @@ main{
     margin-top:15px;
     margin-left:20px;
     margin-right: 20px;
-    border:6px solid rgb(221, 184, 143);
+    border:2px solid rgb(221, 184, 143);
     border-radius:20px;
     padding:20px;
     vertical-align: top;
@@ -42,13 +53,13 @@ main{
 }
 .contact_container p,
 .contact_container a{
-    color:#442b15;
     font-size:20px;
     text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
 }
 
 .contact_h1{
-    color:#5e3f25;
     font-size:70px;
     margin-bottom:0;
     text-align: center;
@@ -57,7 +68,6 @@ main{
 
 .contact_span{
     text-align: center;
-    color:#a57b56;
 }
 
 iframe{
@@ -86,7 +96,6 @@ iframe:hover{
 #contact_end_p{
     text-align: center;
     margin-bottom: 40px;
-    color: #8f745c;
 }
 /* ---- Tablet and Mobile ---- */
 @media (max-width: 768px){
