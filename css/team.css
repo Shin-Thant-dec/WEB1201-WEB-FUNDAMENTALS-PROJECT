@@ -1,3 +1,14 @@
+/*light mode color theme*/
+:root{
+    --card-color: #FFF4E6;
+    --button-color: #4d2604;
+}
+
+/*dark mode color theme*/
+.darkmode{
+    --card-color: rgb(74, 58, 47);
+    --button-color: #FFF4E6;
+}
 
 .heading_section{
     max-width: 1100px;
@@ -23,7 +34,7 @@
     display:flex;
     align-items:center;
     gap:50px;
-    background:#FFF4E6;
+    background:var(--card-color);
     padding:30px;
     border-radius:15px;
     box-shadow:0 8px 20px rgba(0,0,0,.08);
@@ -59,8 +70,8 @@
 .info a{
     display:inline-block;
     padding:12px 25px;
-    border: 1px solid #4d2604;
-    color: #4d2604;;
+    border: 1px solid var(--button-color);
+    color: var(--button-color);;
     text-decoration:none;
     border-radius:8px;
     transition:0.3s;
@@ -70,8 +81,8 @@
 }
 
 .info a:hover{
-    background-color: #4d2604;
-    color: #fff;
+    background-color: var(--button-color);
+    color: var(--card-color);
 }
 
 .reverse{
