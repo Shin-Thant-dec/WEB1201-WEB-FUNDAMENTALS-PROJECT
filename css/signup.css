@@ -7,17 +7,17 @@
 
 /*light mode color theme*/
 :root{
-    --card-bg:#FFF8F1;
-    --card-border: #EFD8C4;
-    --label-bg: #35200f;
-    --label-color:#E7D7C6;
+    --card-bg:#FBF8F2;
+    --card-border: #CFDBC9;
+    --label-bg: #EFD8C4;
+    --label-color:#35200f;
 }
 
 /*dark mode color theme*/
 .darkmode{
-    --card-bg: #1E1B18;
-    --card-border: #342A22;
-    --label-bg: #E7D7C6;
+    --card-bg: #342A22;
+    --card-border: #6f655a;
+    --label-bg: #EFD8C4;
     --label-color:#35200f;
 }
 
@@ -129,13 +129,13 @@ input::placeholder {
     transform: scale(.98);
 }
 
-p {
+.container p {
     text-align: center;
     margin-top: 15px;
 }
 
-a {
-    color: var(--label-bg);
+.container a {
+    color: #b39377;
     text-decoration: none;
     font-weight: bold;
 }
