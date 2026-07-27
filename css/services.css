@@ -1,3 +1,24 @@
+/*light mode color theme*/
+:root{
+    --card-bg:#FBF8F2;
+    --toobar-border:#CFDBC9;
+    --toobar-text: #223027;
+    --price:#B23A5B;
+}
+
+/*dark mode color theme*/
+.darkmode{
+    --card-bg: #342A22;
+    --toobar-border:#6f655a;
+    --toobar-text: #F4D7B7;
+    --price:rgb(244, 173, 87);
+
+    .card{
+        background-image: url(/images/catalogue-card-darkmode.jpeg);
+    }
+}
+
+/*service sectoion start*/
 .services_section{
     max-width: 1300px;
     margin: 0 auto;
@@ -9,25 +30,21 @@
 
 .title h1{
     font-size: 50px;
-    color: #3B2F2F;
-}
-/* The title part*/
-.title span{
-    color: #4F6D67;
 }
 
 /* The service toolbar*/
 .catalogue_toolbar{
-    background-color: #FBF8F2;
+    background-color: var(--card-bg);
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid #CFDBC9;
+    border: 1px solid var(--toobar-border);
     border-radius: 14px;
     padding: 16px 24px;
     margin-bottom: 32px;
+    box-shadow: 0 10px 24px -14px rgba(34, 48, 39, 0.35);
 }
 
 .catalogue_toolbar .field_group{
@@ -38,23 +55,20 @@
 
 .catalogue_toolbar label{
     font-size: 1.2em;
+    color: var(--toobar-text);
 }
 
 .catalogue_toolbar input,
 .catalogue_toolbar select{
     padding: 10px 12px;
     border-radius: 6px;
-    border: 1.5px solid #CFDBC9;
+    border: 1.5px solid var(--toobar-border);
     background-color: white;
     color: #223027;
 }
 
-.catalogue_count{
-    color:#4C5B51;
-}
-
 /* catalogue_card */
-#catalogue_card{
+.catalogue_card{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
@@ -62,10 +76,12 @@
 
 .card{
     position: relative;
+    background-image: url(/images/catalogue-card.jpeg);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    border: 1px solid #CFDBC9;
+    background-color: var(--card-bg);
+    border: 1px solid var(--toobar-border);
     border-radius: 14px;
     box-shadow: 0 10px 24px -14px rgba(34, 48, 39, 0.35);
     padding: 32px 24px 24px 40px;
@@ -91,44 +107,15 @@
 
 .service_description{
     font-size: 1em;
-    color: #6bac9c;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .price{
     font-family: 'Space Mono', 'Courier New', monospace;
     font-size: 24px;
-    color: #B23A5B;
+    color: var(--price);
 }
 
-.card li{
-    list-style-type: none;
-    font-size: 15px;
-    margin-bottom: 5px;
-    color: #3F7A6B;
-}
 
-.booking_button{
-    text-align: left;
-    margin-top: 20px;
-}
-
-.booking_button a{
-    border: 2px solid #3F7A6B;
-    border-radius: 999px;
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px 20px;
-    color: #3F7A6B;
-}
-
-.booking_button a:hover{
-    background-color: #3F7A6B;
-    color: #CFDBC9;
-}
-
-.service_title {
-    color: black;
-}
 
 /* Mobile screen */
 @media (max-width: 768px){

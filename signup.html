@@ -3,25 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Paw Paw Groming</title>
+    <title>Sign Up</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/signup.css">
 </head>
 <body>
-    <div>
+    <!--the navbar cannnot be inside the header, bcos the position of is sticky and -->
+    <!--If put inside the header, then the navbar will be stacked inside the header, so navbar dont follow if u srcoll down the screen-->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="homepage.html">
+                <img src="images/Logo3.0.png" class="logo" alt="Homepage" >
+            </a>
+            <button class="navbar-toggle">
+                <!--The button prepared for small screeen size-->
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li>
+                    <button id="theme-switch">
+                        <p>&#127769;</p>
+                        <p>&#127774;</p>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+    <div class="container">
         <h1>Signup</h1>
         <p id="error-message"></p>
         <form id="form">
             <div>
-                <label for="firstname-input">
+                <label for="firstname-input-input">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M367-527q-47-47-47-113t47-113q47-47 113-47t113 47q47 47 47 113t-47 113q-47 47-113 47t-113-47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm296.5-343.5Q560-607 560-640t-23.5-56.5Q513-720 480-720t-56.5 23.5Q400-673 400-640t23.5 56.5Q447-560 480-560t56.5-23.5ZM480-640Zm0 400Z"/></svg>
                 </label>
                 <input type="text" name="firstname" id="first-name-input" placeholder="First Name">
-                <input type="text" name="lastname" id="last-name-input" placeholder="Last Name (optional)">
+                <input type="text" name="lastname" id="last-name-input" placeholder="Last Name">
             </div>
             <div>
                 <label for="email-input">
@@ -45,8 +76,56 @@
                 <button type="submit">Sign up</button>
             </div>
         </form>
-        <p>Already have an Account? <a href="booking.html">Login</a></p>
+        <p>Already have an Account? <a href="booking.html">Login to Book Appointment</a></p>
     </div>
+    </main>
+
+    <!--footer-->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="homepage.html"><img src="images/Logo3.0.png" class="logo"></a>
+                <p>Quality Care, Naturally Gentle.</p>
+            </div>
+            <div class="footer_block">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer_block">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Book Now</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer_block">
+                <h4>Reach to Us</h4>
+                <ul>
+                    <li><a href="https://maps.app.goo.gl/HX3k16Foxzozwnq57">📍 Sunway University</a></li>
+                    <li><a href="#">📞 +60 12-345 6789</a></li>
+                    <li><a href="#">🕒 Mon-Sat: 9am - 6pm</a></li>
+                </ul>
+                <div class="footer_socials">
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+                <p>&copy; 2026 Paw Paw Grooming. All rights reserved.</p>
+        </div>
+        
+    </footer>  
+<script src="javascript/nav.js"></script>
+<script src="javascript/auth.js"></script>
+<script src="/javascript/validation.js"></script>
 </body>
-<script src="./javascript/validation.js"></script>
+
 </html>
