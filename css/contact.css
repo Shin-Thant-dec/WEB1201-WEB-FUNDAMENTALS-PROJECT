@@ -97,6 +97,21 @@ iframe:hover{
     text-align: center;
     margin-bottom: 40px;
 }
+
+.contact_socials{
+    margin: 10px auto;
+    display: inline-block;
+    text-align: center;
+}
+
+.contact_socials a{
+    font-size: 30px;
+    margin: 0 14px;
+}
+.contact_socials a:hover{
+    color: #75563A;
+}
+
 /* ---- Tablet and Mobile ---- */
 @media (max-width: 768px){
     .contact_block1, .contact_block2, .contact_block3{
