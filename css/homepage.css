@@ -109,7 +109,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(/images/homepage_section2_background.svg);
+    background-image: url(../images/homepage_section2_background.svg);
     background-position: center;
     background-repeat: repeat-x;
 }
@@ -136,7 +136,7 @@
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background-image: url(/images/cat1.jpg);
+    background-image: url(../images/cat1.jpg);
     background-position: center;
     background-size: 120px;
     background-repeat: no-repeat;
