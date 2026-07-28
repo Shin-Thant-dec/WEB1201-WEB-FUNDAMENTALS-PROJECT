@@ -14,7 +14,7 @@
     --price:rgb(244, 173, 87);
 
     .card{
-        background-image: url(/images/catalogue-card-darkmode.jpeg);
+        background-image: url(../images/catalogue-card-darkmode.jpeg);
     }
 }
 
@@ -76,7 +76,7 @@
 
 .card{
     position: relative;
-    background-image: url(/images/catalogue-card.jpeg);
+    background-image: url(../images/catalogue-card.jpeg);
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
