@@ -21,6 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const step2Error = document.getElementById('step2Error');
     const step3Error = document.getElementById('step3Error');
 
+    const DEMO_ACCOUNT = {
+        firstname: 'Demo',
+        lastname: 'User',
+        email: 'pawpawtest@gmail.com',
+        password: 'pawpawtest123'
+    };
+        
+
     function showStep(index) {
         steps.forEach((step, i) => step.classList.toggle('active', i === index));
         trailSteps.forEach((trail, i) => {
@@ -43,14 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
             errors.push('Email is required');
         } else if (!EMAIL_REGEX.test(email)) {
             errors.push('Please enter a valid email address');
-        }
-
-        if (!password) {
-            errors.push('Password is required');
-        }
-
-        if (errors.length === 0 && !validateLogin(email, password)) {
-            errors.push("We couldn't find an account with that email and password. Please sign up first");
+        } else {
+            if (email !== DEMO_ACCOUNT.email) {
+                errors.push("We couldn't find an account with that email.");
+            } else if (!password) {
+                errors.push("Password is required");
+            } else if (password !== DEMO_ACCOUNT.password) {
+                errors.push("Incorrect password.");
+            };
         }
 
         return errors;
@@ -86,9 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (errors.length) {
             showErrors(step1Error, errors);
             return;
-        }
+        } 
         showErrors(step1Error, []);
-        setLoggedInUser(ownerEmail.value.trim());
         showStep(1);
     });
 

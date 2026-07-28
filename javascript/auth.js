@@ -12,7 +12,7 @@ const DEMO_ACCOUNT = {
 
 // Returns every stored account, seeding the demo account the first time.
 function getAccounts() {
-    let accounts = [];
+    const accounts = [];
     try {
         accounts = JSON.parse(localStorage.getItem(ACCOUNTS_KEY)) || [];
     } catch (e) {

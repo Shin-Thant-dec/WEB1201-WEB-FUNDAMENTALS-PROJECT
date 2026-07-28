@@ -20,19 +20,23 @@ const sortFilter = document.getElementById('sort');
 const container = document.getElementById('catalogue_card');
 
 function filterServices() {
+    // taking value from input
     const searchInput = search.value.toLowerCase().trim();
     const category = categoryFilter.value;
     const sortOption = sortFilter.value;
 
     // like for loop this filters through services array one by one
     let filteredServices = services.filter(service => {
+        //matching input values with existing values in database
         const matchSearches = service.name.toLowerCase().includes(searchInput);
         const matchCategory = category === 'all' || service.category === category;
 
         return matchSearches && matchCategory;
     });
 
+    // 
     if (sortOption === 'name a-z') {
+        //comparing 'a' with 'b' according to their values
         filteredServices.sort((a, b) => a.name.localeCompare(b.name));
     } else if (sortOption === 'name z- a') {
         filteredServices.sort((a,b) => b.name.localeCompare(a.name));
@@ -45,6 +49,8 @@ function filterServices() {
     if (filteredServices.length === 0) {
         container.innerHTML = `<p>No services found.</p>`;
     } else {
+        // this writes the following code inside container which is connected to the element named catalogue_card' 
+        // 
         container.innerHTML = filteredServices.map(service => `
                 <div class="card">
                     <span>${service.category}</span>

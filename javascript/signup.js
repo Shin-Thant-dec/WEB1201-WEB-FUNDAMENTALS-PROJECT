@@ -6,10 +6,6 @@ const psw_input = document.getElementById('password-input');
 const repeat_psw_input = document.getElementById('repeat-password-input');
 const error_msg = document.getElementById('error-message');
 
-const ownerSection = document.getElementById('owner');
-const petSection = document.getElementById('pet');
-const loginPage = petSection !== null;
-
 owner_form.addEventListener('submit', (event) => {
     event.preventDefault();
     let errors = [];
@@ -25,18 +21,9 @@ owner_form.addEventListener('submit', (event) => {
     
         //checks whether if the page is login or sign up
     } else {
-        if (loginPage) {
-            if (ownerSection) ownerSection.style.display = 'none';
-            if (petSection) {
-                petSection.style.display = 'block';
-            }
-        } else {
-            error_msg.innerText = "Signup successful!"
-            error_msg.style.color = 'green';
-            owner_form.reset();
-
-        }
-
+        error_msg.innerText = "Signup successful!"
+        error_msg.style.color = 'green';
+        owner_form.reset();
     }
 })
 
@@ -88,10 +75,8 @@ function getSignupFormErrors(firstname, lastname, email, password, repeatpasswor
     return errors;
 }
 
-// the last part filter out the input that are empty so that it also works for the login page which only consists of two value
-const allInputs = [firstname_input, lastname_input, email_input, psw_input, repeat_psw_input].filter(input => input != null);
+const allInputs = [firstname_input, lastname_input, email_input, psw_input, repeat_psw_input];
 
-// supposed to be used to remove red border when the input are correct, not working at the moment
 allInputs.forEach(input => {
     if (input) { 
         input.addEventListener('input', () => {
