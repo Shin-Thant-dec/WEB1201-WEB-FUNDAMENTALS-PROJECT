@@ -305,7 +305,7 @@ p, span, li{
         overflow-x: scroll;
         gap: 0; /*control the space between elements*/
 
-        /* This is part is used to hide the scroll bar on multiple browsers*/
+        /* This is part is used to hide the scroll bar on multiple browsers while user still can scroll the navbar*/
         /* Reference: How To Hide Scrollbars With CSS, (W3Schools)*/
         scrollbar-width: none;      /*FireFox*/
         -ms-overflow-style: none;   /* IE and Edge*/
