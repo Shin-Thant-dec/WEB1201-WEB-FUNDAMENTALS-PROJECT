@@ -90,7 +90,9 @@
     transform: scale(1.1);
 }
 
+
 .section1-image img{
+    padding: 1rem;
     width: 100%;
     height: auto;
     display: block;
@@ -456,7 +458,7 @@
  
     .section1-image {
       order: 1; /*let picture be arranged in first flex item, which the top of text*/
-      width: 70%;
+      width: 90%;
     }
  
     .section1-text {

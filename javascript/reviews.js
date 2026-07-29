@@ -1,4 +1,5 @@
 /*this js file is used let user write review -> submit -> then the data will be stored into local storage -> then rendered on the web page*/
+// this is private function
 (function () {
     'use strict';
 
@@ -57,6 +58,8 @@
         return result;
     }
 
+    // this function is only used for security meaure.
+    // this converts the script into text so that code cannot be seen by outsiders when executed
     function escapeHtml(text) {
         const div = document.createElement('div');
         div.textContent = text;
@@ -72,6 +75,8 @@
             const card = document.createElement('div');
             card.className = 'card';
             card.innerHTML =
+
+            // write inside the element iwth 'card' this will generate html code in the following format.
                 '<p class="stars" aria-label="' + review.rating + ' out of 5 stars">' + starString(review.rating) + '</p>' +
                 '<p>' + escapeHtml(review.text) + '</p>' +
                 '<span class="review-meta">' + escapeHtml(review.name) + ' | ' + review.date + '</span>';
@@ -86,6 +91,7 @@
         for (let i = 0; i < stars.length; i = i + 1) {
             const star = stars[i];
             if (i < value) {
+                // check whether the star is 
                 star.classList.add('filled');
                 star.setAttribute('aria-checked', 'true');
             } else {

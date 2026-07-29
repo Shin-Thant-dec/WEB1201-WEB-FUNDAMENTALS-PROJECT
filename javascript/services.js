@@ -18,6 +18,7 @@ const search = document.getElementById('search');
 const categoryFilter = document.getElementById('category');
 const sortFilter = document.getElementById('sort');
 const container = document.getElementById('catalogue_card');
+const count = document.getElementsByClassName('catalogue_count');
 
 function filterServices() {
     // taking value from input
@@ -33,6 +34,10 @@ function filterServices() {
 
         return matchSearches && matchCategory;
     });
+
+    const counter = filteredServices.length;
+    document.querySelector('.catalogue_count').innerHTML = 
+    `${counter} services available`;
 
     // 
     if (sortOption === 'name a-z') {
