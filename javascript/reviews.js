@@ -3,32 +3,32 @@
     'use strict';
 
     //By declaring a varicle as a key to access the local storage
-    var STORAGE_KEY = 'pawpaw-reviews';
+    const STORAGE_KEY = 'pawpaw-reviews';
 
-    var SEED_REVIEWS = [
+    const SEED_REVIEWS = [
         { name: 'Taylor Swift', rating: 5, text: 'Our labrador came home looking (and smelling) brand new. The team was so patient with him!', date: '2026-04-02' },
         { name: 'Mr Potato', rating: 4, text: 'Great senior spa service - very gentle with my old cat who normally hates baths.', date: '2026-04-18' },
         { name: 'Kang Haerin', rating: 5, text: 'Booked online in minutes and the groomer nailed the exact trim I asked for.', date: '2026-05-01' }
     ];
 
     //find the list and form element across the html web and store them into variable
-    var list = document.querySelector('[data-review-list]');
-    var form = document.querySelector('[data-review-form]');
+    const list = document.querySelector('[data-review-list]');
+    const form = document.querySelector('[data-review-form]');
 
     //this syntax used to indicate that if either list or form doesn't exit, then it will end the js program
     if (!list || !form) {
         return;
     }
 
-    var starPicker = form.querySelector('[data-star-picker]');
-    var ratingInput = form.querySelector('[name="reviewRating"]');
-    var stars = starPicker.querySelectorAll('button');
-    var currentRating = 0;
+    const starPicker = form.querySelector('[data-star-picker]');
+    const ratingInput = form.querySelector('[name="reviewRating"]');
+    const stars = starPicker.querySelectorAll('button');
+    let currentRating = 0;
 
     //this function is used to read the data from local storage
     function loadReviews() {
         //load the data from the local storage
-        var raw = localStorage.getItem(STORAGE_KEY);
+        const raw = localStorage.getItem(STORAGE_KEY);
         if (!raw) { 
         return SEED_REVIEWS.slice();
         }
@@ -46,9 +46,8 @@
 
     //use for loop to load the star and distinguish them into solid star and hollow star
     function starString(rating) {
-        var result = '';
-        var i;
-        for (i = 1; i <= 5; i = i + 1) {
+        let result = '';
+        for (let i = 1; i <= 5; i = i + 1) {
             if (i <= rating) {
                 result = result + '\u2605'; //the \u2605 is solid star
             } else {
@@ -59,19 +58,18 @@
     }
 
     function escapeHtml(text) {
-        var div = document.createElement('div');
+        const div = document.createElement('div');
         div.textContent = text;
         return div.innerHTML;
     }
 
     //display the reviews into div and render them, they will be look like a card, i style it in reviews.css file
     function render(reviews) {
-        var i, review, card;
         list.innerHTML = '';    //overwrite the list to become a empty space
 
-        for (i = reviews.length - 1; i >= 0; i = i - 1) {
-            review = reviews[i];
-            card = document.createElement('div');
+        for (let i = reviews.length - 1; i >= 0; i = i - 1) {
+            const review = reviews[i];
+            const card = document.createElement('div');
             card.className = 'card';
             card.innerHTML =
                 '<p class="stars" aria-label="' + review.rating + ' out of 5 stars">' + starString(review.rating) + '</p>' +
@@ -83,11 +81,10 @@
 
     //this function is used to update the star color/appearance when user click on star
     function setRating(value) {
-        var i, star;
         currentRating = value;
         ratingInput.value = value;
-        for (i = 0; i < stars.length; i = i + 1) {
-            star = stars[i];
+        for (let i = 0; i < stars.length; i = i + 1) {
+            const star = stars[i];
             if (i < value) {
                 star.classList.add('filled');
                 star.setAttribute('aria-checked', 'true');
@@ -99,8 +96,7 @@
     }
 
     function attachStarEvents() {
-        var i;
-        for (i = 0; i < stars.length; i = i + 1) {
+        for (let i = 0; i < stars.length; i = i + 1) {
         (function (index) {
             stars[index].addEventListener('click', function () {
             setRating(index + 1);
@@ -126,10 +122,10 @@
     form.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        var nameField = form.querySelector('[name="clientName"]');
-        var errorEl = form.querySelector('[data-review-error]');
-        var textField = form.querySelector('[name="reviewText"]');
-        var reviews;
+        const nameField = form.querySelector('[name="clientName"]');
+        const errorEl = form.querySelector('[data-review-error]');
+        const textField = form.querySelector('[name="reviewText"]');
+        let reviews;
 
         if (currentRating === 0 || nameField.value.trim() === '') {
             errorEl.textContent = 'Please add your name and a star rating';
@@ -153,8 +149,8 @@
     });
 
     // Character count for the review textarea.
-    var textArea = form.querySelector('[name="reviewText"]');
-    var counter = form.querySelector('[data-char-count]');
+    const textArea = form.querySelector('[name="reviewText"]');
+    const counter = form.querySelector('[data-char-count]');
     if (textArea && counter) {
         textArea.addEventListener('input', function () {
         counter.textContent = textArea.value.length + ' characters';
