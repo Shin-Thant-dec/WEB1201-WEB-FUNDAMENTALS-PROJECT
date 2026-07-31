@@ -18,13 +18,15 @@
     
     --border: 1px solid hsl(0, 0%, 30%);
 
-    /* font */
+    /* main fonts consistent throughout */
+    /* other fonts vary based on the section used */
     --ff: 'Trebuchet MS', Helvetica, Arial, sans-serif;
     --h1: bold 2.5rem/2em var(--ff);
     --p: 1rem/1.25em var(--ff);
 }
 
-/* light mode */
+/* light mode, only applied for profile section because the bg has light color */
+/* initally purposed for light mode using js */
 .light {
     --bg-dark: hsl(0, 0%, 90%);
     --bg: hsl(0, 0%, 95%);
@@ -37,6 +39,7 @@ h1 {
     font: var(--h1);
 }
 
+/* muted because i want to highlight other information to make them more catchy and get attention */
 p {
     font: var(--p);
     color: var(--text-muted)
@@ -46,6 +49,7 @@ li {
     font: var(--p);
 }
 
+/* smooth scroll animation and fixed width to avoid crashing */
 html {
     min-width: 360px;
     scroll-behavior: smooth;
@@ -68,6 +72,7 @@ header {
     position: fixed;
 }
 
+/* very basic nav */
 nav {
     display: flex;
     padding: 1rem 2rem;
@@ -97,6 +102,7 @@ main {
     ); */
 }
 
+/* this gives the section some white space to breath */
 section {
     max-width: 1200px;
     margin: 0 auto;
@@ -177,6 +183,7 @@ section > h1 {
     display: flex;
     padding-left: 2rem;
 }
+/* in the endused only once throughout :) */
 
 .edu-card {
     display: grid;
@@ -186,6 +193,7 @@ section > h1 {
     border-radius: 1rem;
     gap: 1rem;
     padding: 1rem;
+    /* created left shadow to give more personality because the portfolio feels too basic and dry */
     box-shadow: var(--text) -5px 0px 0px;
 }
 
@@ -224,6 +232,7 @@ span.date{
     line-height: 2rem;
 }
 
+/* same as profile, i make the experience part stays fixed until the section ends */
 .experience {
     position: sticky;
     top: 10%;
@@ -336,6 +345,7 @@ span.skill-name, .skill-percentage {
     overflow: hidden;
 }
 
+/* create white line for the progress part */
 .progress-fill {
     height: 100%;
     border-radius: 10px;
@@ -343,6 +353,7 @@ span.skill-name, .skill-percentage {
     max-width: 100%;
 }
 
+/* make the color change for each skill according to the percentage that i have */
 .progress-fill.java {
     width: 65%;
     background: linear-gradient(90deg, #6c5ce7, #a29bfe);
@@ -403,6 +414,7 @@ span.skill-name, .skill-percentage {
     height: auto;
 }
 
+/* shows users that these are clickable */
 .button {
     background-color: var(--accent);
     border-radius: 0.5rem;
@@ -411,6 +423,7 @@ span.skill-name, .skill-percentage {
     max-height: fit-content;
 }
 
+/* change cover when hovered */
 .button:hover {
     background-color: var(--clickable);
 }
@@ -460,6 +473,8 @@ span.skill-name, .skill-percentage {
     }
 
 }
+
+/* the followings are basic animations */
 
 @keyframes fadeInUp {
     from {
