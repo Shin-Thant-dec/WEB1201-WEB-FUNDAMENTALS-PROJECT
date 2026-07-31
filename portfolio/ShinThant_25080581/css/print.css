@@ -1,0 +1,46 @@
+@media print {
+    header, #cv-container, .logo-container {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .skill-card, .edu-card, .project-card, .experience {
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+        break-inside: avoid;
+    }
+    
+    .progress-track {
+        border: 1px solid #ccc !important;
+    }
+    
+    .progress-fill {
+        background: #333 !important;
+    }
+
+        #pfp {
+        background-image: none !important; 
+        background-color: #f0f0f0 !important; 
+    }
+
+    img {
+        width: 150px importn !important;
+        height: auto;
+        border-radius: 50% !important;
+    }
+
+    .skill-category svg,
+    .project-header a svg,
+    #cv-container svg,
+    .logo-container .logo {
+        display: none !important;
+        visibility: hidden !important;
+        width: 0 !important;
+        height: 0 !important;
+        opacity: 0 !important;
+    }
+}

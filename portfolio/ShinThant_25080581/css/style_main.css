@@ -1,0 +1,579 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+}
+
+:root {
+    /* colors  */
+    /* dark mode */
+    --bg-dark: hsl(0, 0%, 0%);
+    --bg: hsl(0, 0%, 5%);
+    --bg-light: hsl(0, 0%, 10%);
+    --text: hsl(0, 0%, 90%);
+    --text-muted: hsl(0, 0%, 70%);
+    --clickable: #ff6b6b;
+    --accent: #a29bfe;
+    
+    --border: 1px solid hsl(0, 0%, 30%);
+
+    /* font */
+    --ff: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+    --h1: bold 2.5rem/2em var(--ff);
+    --p: 1rem/1.25em var(--ff);
+}
+
+/* light mode */
+.light {
+    --bg-dark: hsl(0, 0%, 90%);
+    --bg: hsl(0, 0%, 95%);
+    --bg-light: hsl(0, 0%, 100%);
+    --text: hsl(0, 0%, 10%);
+    --text-muted: hsl(0, 0%, 30%);
+}
+
+h1 {
+    font: var(--h1);
+}
+
+p {
+    font: var(--p);
+    color: var(--text-muted)
+}
+
+li {
+    font: var(--p);
+}
+
+html {
+    min-width: 360px;
+    scroll-behavior: smooth;
+}
+
+body {
+    text-wrap: balance;
+    background: var(--bg-dark);
+    color: var(--text);
+}   
+
+/* ensure that the header(navigation) always stay at 10px at the top */
+header {
+    top: 10px;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+}
+
+nav {
+    display: flex;
+    padding: 1rem 2rem;
+    background: var(--bg-light); 
+    gap: 1rem;
+    border: var(--border);
+    border-radius: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+nav a:hover {
+    color: var(--clickable);
+}
+
+
+main { 
+    top: 100px;
+    display: block;
+    /* fade out (testing progress) */
+    /* mask-image: linear-gradient(to bottom,
+        transparent 0%, 
+        black 200px
+    ); */
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section > h1 {
+    text-align: center;
+    padding: 2rem;
+}
+
+#profile-container {
+    display: grid;
+    /* give more space for the text and less space for the picture in 2:3 ratio */
+    grid-template-columns: 2fr 3fr;
+    padding-top: 100px;
+}
+
+#pfp {
+    height: 550px;
+    width: 100%;
+    background-image: url(../img/ocean_bg.jpg);
+    background-size: cover;
+    color: var(--text);
+    justify-self: center;
+    border-radius: 1rem;
+    text-align: center;
+    /* make the container stay until the section is completed */
+    position: sticky;
+    top: 100px;
+}
+
+#img-container {
+    padding: 2rem 2rem 0rem 2rem;
+}
+
+#img-container img {
+    max-width: 340px;
+    width: 100%;
+    min-width: 260px;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.logo-container {
+    display: flex;
+    justify-self: center;
+    gap: 4rem;
+    padding-top: 3em;
+    padding-bottom: 1em;
+}
+
+.logo {
+    width: 2rem;
+}
+
+#about {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 3, 1fr);
+    padding-left: 3rem;
+    gap: 1rem;
+}
+
+#about h2 {
+    line-height: 2rem;
+}
+
+#education-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* I use this whenever I want to apply flex for a section */
+/* for the whole website, grid is only applied when I want the structure to  be fixed */
+/* flex is used majority of the time if i want flexibility  */
+.flex-container {
+    display: flex;
+    padding-left: 2rem;
+}
+
+.edu-card {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    background-color: var(--bg);
+    border: var(--border);
+    border-radius: 1rem;
+    gap: 1rem;
+    padding: 1rem;
+    box-shadow: var(--text) -5px 0px 0px;
+}
+
+.duration {
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 1;
+}
+
+span.date{
+    border: var(--border);
+    border-radius: 1rem;
+    color: var(--text-muted);
+    padding: 0.5rem 1rem;
+    max-width: fit-content;
+}
+
+#project-container {
+    display: grid;
+    grid-template-columns: repeat(2, max(45%));
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+#project-container span {
+    margin-bottom: 1rem;
+    margin-top:0.5rem;
+}
+
+#project-container h3 {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+#project-container h2{
+    line-height: 2rem;
+}
+
+.experience {
+    position: sticky;
+    top: 10%;
+    max-height: fit-content;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-card, .experience {
+    background-color: var(--bg);
+    border: var(--border);    
+    border-radius: 1rem;
+    padding: 1.5rem 3rem; 
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.experience li {
+    line-height: 1.5rem;
+}
+
+#skill-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-bottom: 3rem;
+}
+
+.skill-card {
+    border: var(--border);
+    background-color: var(--bg);
+    border-radius: 1rem;
+    padding: 2rem 4rem;
+}
+
+.skill-card:first-of-type {
+    grid-column: span 2;
+}
+ 
+/* I wanted to add more flexiblity for the list of items to wrap around by it self */
+/* Using normal list would make it goes in a column and it will leave a lot of unused whitespace on the right side */
+.skill-card > ul {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.skill-card > ul > li {
+    border: var(--border);
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    
+}
+
+.skill-card h2 {
+    line-height: 2.5rem;
+}
+
+.skill-item, .skill-category{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.skill-left {
+    display: flex;
+    justify-content: flex-end;
+    width: 20%;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.skill-name {
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.skill-percentage {
+    color: #0984e3;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0 10px;
+    border-radius: 12px;
+}
+
+span.skill-name, .skill-percentage {
+    border: none;
+}
+
+.progress-track {
+    background-color: #e9ecef;
+    width: 70%;
+    height: 0.75rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 10px;
+    width: 0%;
+    max-width: 100%;
+}
+
+.progress-fill.java {
+    width: 65%;
+    background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+}
+
+.progress-fill.python {
+    width: 40%;
+    background: linear-gradient(90deg, #00b894, #00cec9);
+}
+
+.progress-fill.c {
+    width: 30%;
+    background: linear-gradient(90deg, #e17055, #d63031);
+}
+
+.progress-fill.linux {
+    width: 30%;
+    background: linear-gradient(90deg, #fdcb6e, #f39c12);
+}
+
+.progress-fill.assembly {
+    width: 20%;
+    background: linear-gradient(90deg, #0984e3, #74b9ff);
+}
+
+.progress-fill.html5 {
+    width: 85%;
+    background: linear-gradient(90deg, #e44d26, #f06529);
+}
+
+.progress-fill.css3 {
+    width: 75%;
+    background: linear-gradient(90deg, #264de4, #2965f1);
+}
+
+.progress-fill.javascript {
+    width: 40%;
+    background: linear-gradient(90deg, #f7df1e, #f0db4f);
+}
+
+.progress-fill.oraclesql {
+    width: 60%;
+    background: linear-gradient(90deg, #f80000, #cc0000);
+}
+
+.progress-fill.cisco {
+    width: 60%;
+    background: linear-gradient(90deg, #1ba0d7, #0085c7);
+}
+
+#cv-container {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+}
+#cv-container svg {
+    width: 50px;
+    height: auto;
+}
+
+.button {
+    background-color: var(--accent);
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    flex: 0 1 auto;
+    max-height: fit-content;
+}
+
+.button:hover {
+    background-color: var(--clickable);
+}
+/* stretches the sections to full width by changing the display to block */
+/* */
+@media (max-width: 768px) {
+
+    #profile-container{
+        display: block; 
+        padding-top: 100px;
+    }
+
+    #about {
+        text-align: center;
+    }
+
+    #education-container {
+        display: block;
+    }
+
+    #img-container img {
+        width: 100%;
+        max-width: 320px;
+        min-width: 150px;
+        border-radius: 1rem;
+        object-fit: cover;
+    }
+
+    #project-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .experience {
+        position: relative;
+    }
+
+    .projects h1 {
+        text-align: center;
+    }
+    #skill-container {
+        display: block;
+    }
+
+    .edu-card, .skill-card {
+        margin-bottom: 2rem
+    }
+
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+        filter: blur(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(162, 155, 254, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(162, 155, 254, 0.5);
+    }
+}
+
+#profile-container {
+    animation: slideInLeft 0.8s ease-out forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+}
+
+#education-container {
+    animation: scaleIn 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+#project-container {
+    animation: slideInRight 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+#skill-container {
+    animation: fadeInUp 0.9s ease-out forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+.project-card, .edu-card, .skill-card {
+    opacity: 0;
+    animation: scaleIn 0.6s ease-out forwards;
+}
+
+@keyframes fillBar {
+    from {
+        width: 0%;
+    }
+    to {
+        width: var(--target-width);
+    }
+}
+
+.progress-fill {
+    animation: fillBar 1.5s ease forwards;
+}
+
+.progress-fill.java { --target-width: 65%; }
+.progress-fill.python { --target-width: 40%; }
+.progress-fill.c { --target-width: 30%; }
+.progress-fill.linux { --target-width: 30%; }
+.progress-fill.assembly { --target-width: 20%; }
+.progress-fill.html5 { --target-width: 85%; }
+.progress-fill.css3 { --target-width: 75%; }
+.progress-fill.javascript { --target-width: 40%; }
+.progress-fill.oraclesql { --target-width: 60%; }
+.progress-fill.cisco { --target-width: 60%; }
+
+section {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+#profile-container { animation-delay: 0.1s; }
+#education-container { animation-delay: 0.2s; }
+#project-container { animation-delay: 0.3s; }
+#skill-container { animation-delay: 0.4s; }
