@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!--This link is used to get the social media icon from fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="portfolio.css">
+
+</head>
+<body>
+    <!--the navbar cannnot be inside the header, bcos the position of is sticky and -->
+    <!--If put inside the header, then the navbar will be stacked inside the header, so navbar dont follow if u srcoll down the screen-->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="homepage.html">
+                <img src="../images/Logo3.0.png" class="logo" alt="Homepage" >
+            </a>
+            <button class="navbar-toggle">
+                <!--The button prepared for small screeen size-->
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="../homepage.html">Home</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../reviews.html">Reviews</a></li>
+                <li><a href="../booking.html">Book Now</a></li>
+                <li><a href="../contact.html">Contact Us</a></li>
+                <li><a href="../team.html">Our Team</a></li>
+                <li>
+                    <button id="theme-switch">
+                        <p>&#127769;</p>
+                        <p>&#127774;</p>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main">
+        <section class="section container">
+ 
+            <!-- This button is used provide a link to back to team.html-->
+            <div class="team-button">
+                <a href="../team.html">← Back to Our Team</a>
+            </div>
+ 
+            <div class="portfolio-grid">
+                <!-- The side bar = inlude photo, name, role, ahort intro and download cv button -->
+                <aside class="portfolio-sidebar">
+                    <div class="profile"> </div>
+                    <div>
+                        <h1 class="portfolio-name">Koh Cheah Yang</h1>
+                        <p>Student ID: 24109928</p>
+                        <p>Role: Catalogue &amp; Reviews Lead</p>
+                        <p class="portfolio-tagline">Software Engineering student who enjoys turning
+                            clean interfaces into fast, dependable front-ends.</p>
+                    </div>
+                    <button class="cv-button" type="button">
+                        <a href="Portfolio CV.pdf" target="_blank">⬇ Download CV</a>
+                    </button>
+    
+                    <!-- personal contact info -->
+                    <div class="sidebar-meta">
+                        <p><i class="fa fa-envelope-o"></i> 24109928@imail.sunway.edu.my</p>
+                        <p><i class="fa fa-map-marker"></i> Sunway University, Selangor</p>
+                        <p><i class="fa fa-github"></i> github.com/SexyCurryRice</p>
+                    </div>
+
+                </aside>
+    
+                <div>
+                    <!-- PERSONAL BIO -->
+                    <section class="section-tight bio" id="bio">
+                        <h1>Bio</h1>
+                        <p>I'm a Software Engineering student focused on front-end development and interaction
+                            design. I like the moment a messy set of requirements turns into something a
+                            user can just pick up and use — that's what pulled me toward web development in
+                            the first place. On this project I led the booking flow, with a 
+                            particular interest in making multi-step forms feel fast and forgiving rather than tedious.</p><br>
+                        <p>Outside of coursework I enjoy picking apart well-built websites to see how their
+                            layout and state logic hold together, and I'm slowly building the habit of writing
+                            code that my teammates can read without me standing over their shoulder. My goal
+                            after graduating is to work as a software engineer on a product team, with a long
+                            term interest in growing into full-stack and eventually front-end architecture
+                            roles.</p>
+                    </section>
+    
+                    <!-- EDUCATIONAL BACKGROUND -->
+                    <section class="section-tight education" id="education">
+                        <h1>Education</h1>
+    
+                        <ol class="edu-timeline">
+                            <li class="edu-item">
+                                <div class="edu-marker" aria-hidden="true"></div>
+                                <div class="edu-content">
+                                    <div class="edu-heading">
+                                        <h3>Sijil Pelajaran Malaysia (SPM)</h3>
+                                        <span class="edu-year">Year 2024</span>
+                                    </div>
+                                    <p class="edu-institution">SMK Dato' Idris</p>
+                                    <p>Result: <strong>8As 3Bs</strong> — including A- in Additional Mathematics and B in English.</p>
+                                </div>
+                            </li>
+    
+                            <li class="edu-item">
+                                <div class="edu-marker"></div>
+                                <div class="edu-content">
+                                    <div class="edu-heading">
+                                        <h3>Foundation in Arts (FIA)</h3>
+                                        <span class="edu-year">August 2024 - August 2025</span>
+                                    </div>
+                                    <p class="edu-institution">Sunway College Kuala Lumpur</p>
+                                    <p>CGPA: <strong>3.94 / 4.00</strong></p>
+                                </div>
+                            </li>
+    
+                            <li class="edu-item edu-item--current">
+                                <div class="edu-marker"></div>
+                                <div class="edu-content">
+                                    <div class="edu-heading">
+                                        <h3>Bachelor of Software Engineering (Hons)</h3>
+                                        <span class="edu-year">September 2025 - Current</span>
+                                    </div>
+                                    <p class="edu-institution">Sunway University</p>
+                                    <p>Current CGPA: <strong>4.00 / 4.00</strong></p>
+                                    <p>Relevant coursework: Web Fundamentals, Database Fundamentals &amp; Object-Oriented Programming.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </section>
+    
+                    <!-- TECHNICAL SKILLS  -->
+                    <section class="section-tight technical-skills" id="skills">
+                        <h1>Technical skills</h1>
+                        <div class="skill-row">
+                            <div class="skill-label"><span>HTML &amp; Semantic Markup</span><span>75%</span></div>
+                            <div class="skill-bar"><span class="w-75"></span></div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-label"><span>CSS (Grid, Flexbox, Animations)</span><span>70%</span></div>
+                            <div class="skill-bar"><span class="w-70"></span></div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-label"><span>JavaScript (Arrays, Filtering, Events)</span><span>50%</span></div>
+                            <div class="skill-bar"><span class="w-50"></span></div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-label"><span>Java (OOP, JOptionPane, AWT (Abstract Window Toolkit)) </span><span>85%</span></div>
+                            <div class="skill-bar"><span class="w-85"></span></div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-label"><span>Python (Data Structure, Functions & Modules)</span><span>80%</span></div>
+                            <div class="skill-bar"><span class="w-80"></span></div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-label"><span>SQL (Oracle Apex, MySQL, Normalization)</span><span>85%</span></div>
+                            <div class="skill-bar"><span class="w-85"></span></div>
+                        </div>
+                    </section>
+    
+                    <!-- LANGUAGE PROFICIENCY -->
+                    <section class="section-tight languege" id="languages">
+                        <h1>Language proficiency</h1>
+                        <div class="lang-grid">
+                            <div class="lang-row">
+                                <span class="lang-name">English</span>
+                                <div class="lang-dots level-fluent">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                                <span class="lang-level">Fluent</span>
+                            </div>
+                            <div class="lang-row">
+                                <span class="lang-name">Chinese (Mandarin)</span>
+                                <div class="lang-dots level-native">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                                <span class="lang-level">Native</span>
+                            </div>
+                            <div class="lang-row">
+                                <span class="lang-name">Malay</span>
+                                <div class="lang-dots level-fluent">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                                <span class="lang-level">Fluent</span>
+                            </div>
+                            <div class="lang-row">
+                                <span class="lang-name">Hokkien</span>
+                                <div class="lang-dots level-native">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                                <span class="lang-level">Native</span>
+                            </div>
+                            <div class="lang-row">
+                                <span class="lang-name">Thai</span>
+                                <div class="lang-dots level-beginner">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                                <span class="lang-level">Beginner</span>
+                            </div>
+                        </div>
+                    </section>
+    
+                    <!-- PAST PROJECTS -->
+                    <section class="section-tight" id="projects">
+                        <h1>Past projects</h1>
+    
+                        <div class="project-detail-grid">
+
+                            <!-- Project 1 -->
+                            <article class="project-detail-card">
+                                <div class="project-meta">
+                                    <h4>Pet Grooming Services Web Design</h4>
+                                    <span class="project-year">2026</span>
+                                </div>
+                                <p>Group website project (this site). Built the filter, sort and keyword
+                                    search logic across 10 services, plus a review module with a star-rating
+                                    picker and persisted reviews.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                </div>
+                                <ul class="project-features">
+                                    <li>Live keyword search with debounced filtering</li>
+                                    <li>Multi-criteria sort (price, rating, category)</li>
+                                    <li>Star-rating picker with live character count</li>
+                                </ul>
+                                <div class="skills-gained">
+                                    <span class="tech-tag tech-tag--skill">Array methods</span>
+                                    <span class="tech-tag tech-tag--skill">Event delegation</span>
+                                </div>
+                            </article>
+
+                            <!-- Project 2 -->
+                            <article class="project-detail-card">
+                                <div class="project-meta">
+                                    <h4>Retail Inventory & Order Management System</h4>
+                                    <span class="project-year">2026</span>
+                                </div>
+                                <p>Develop a Student Grading System that manages student 
+                                    records and their assessment results. The program should calculate overall grades,
+                                    assign letter grades, and display class performance summaries.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Java</span>
+                                    <span class="tech-tag">OOP</span>
+                                    <span class="tech-tag">Eclipse</span>
+                                </div>
+                                <ul class="project-features">
+                                    <li>Manage product inventory (add, update, delete, and search products).</li>
+                                    <li>Track stock availability and inventory levels.</li>
+                                    <li>Automatically update inventory after each order.</li>
+                                </ul>
+                                <div class="skills-gained">
+                                    <span class="tech-tag tech-tag--skill">OOP</span>
+                                    <span class="tech-tag tech-tag--skill">System analysis</span>
+                                </div>
+                            </article>
+
+                            <!-- Project 3 -->
+                            <article class="project-detail-card">
+                                <div class="project-meta">
+                                    <h4>Warehouse Logistics System</h4>
+                                    <span class="project-year">2026</span>
+                                </div>
+                                <p>Developed a warehouse logistics database system for the home 
+                                    appliance industry using SQL to manage inventory, warehouse operations,
+                                     supplier information, and product distribution efficiently.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">SQL</span>
+                                    <span class="tech-tag">OracleApex</span>
+                                </div>
+                                <ul class="project-features">
+                                    <li>Manage inventory records and stock levels.</li>
+                                    <li>Store and manage supplier, customer, and product information.</li>
+                                    <li>Perform complex queries to support logistics and operational decision-making.</li>
+                                </ul>
+                                <div class="skills-gained">
+                                    <span class="tech-tag tech-tag--skill">Database design</span>
+                                    <span class="tech-tag tech-tag--skill">ERD</span>
+                                    <span class="tech-tag tech-tag--skill">Normalization</span>
+                                </div>
+                            </article>
+    
+                            <!-- Project 4 -->
+                            <article class="project-detail-card">
+                                <div class="project-meta">
+                                    <h4>Python-Powered Student Grading System</h4>
+                                    <span class="project-year">2025</span>
+                                </div>
+                                <p>Develop a Student Grading System that manages student 
+                                    records and their assessment results. The program should calculate overall grades,
+                                    assign letter grades, and display class performance summaries.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">VS Code</span>
+                                </div>
+                                <ul class="project-features">
+                                    <li>Input and manage student information and assessment scores.</li>
+                                    <li>Calculate final grades, GPA, and overall academic performance</li>
+                                    <li>Generate and display student grade reports.</li>
+                                </ul>
+                                <div class="skills-gained">
+                                    <span class="tech-tag tech-tag--skill">Python programming</span>
+                                    <span class="tech-tag tech-tag--skill">Functions and modular programming</span>
+                                </div>
+                            </article>
+    
+                            <!-- Project 5 -->
+                            <article class="project-detail-card">
+                                <div class="project-meta">
+                                    <h4>Snake Game</h4>
+                                    <span class="project-year">2025</span>
+                                </div>
+                                <p>Developed a classic Snake Game using Java and the Abstract Window Toolkit (AWT), 
+                                    implementing real-time game mechanics, keyboard controls, collision detection, 
+                                    and score tracking.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Java</span>
+                                    <span class="tech-tag">Abstract Window Toolkit</span>
+                                    <span class="tech-tag">Eclipse</span>
+                                </div>
+                                <ul class="project-features">
+                                    <li>Control snake movement using keyboard input.</li>
+                                    <li>Generate food randomly and increase the snake's length after consumption.</li>
+                                </ul>
+                                <div class="skills-gained">
+                                    <span class="tech-tag tech-tag--skill">Java AWT GUI development</span>
+                                    <span class="tech-tag tech-tag--skill">Game loop implementation</span>
+                                </div>
+                            </article>
+
+                            <!-- Project 6 -->
+                            <article class="project-detail-card">
+                                <div class="project-meta">
+                                    <h4>Car Rental System</h4>
+                                    <span class="project-year">2025</span>
+                                </div>
+                                <p>Developed a console/desktop-based Car Rental System using 
+                                    core Java to manage vehicle rentals, customer records, and 
+                                    rental transactions through a simple user interface.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Java</span>
+                                    <span class="tech-tag">JOptionPane</span>
+                                    <span class="tech-tag">Ecplise</span>
+                                </div>
+                                <ul class="project-features">
+                                    <li>Register and manage customer information.</li>
+                                    <li>Add, update, delete, and search vehicle records.</li>
+                                    <li>Generate rental summaries and maintain transaction records.</li>
+                                </ul>
+                                <div class="skills-gained">
+                                    <span class="tech-tag tech-tag--skill">Core Java programming</span>
+                                    <span class="tech-tag tech-tag--skill">Basic GUI development with JOptionPane</span>
+                                </div>
+                            </article>
+
+                            <!-- Project 7 -->
+                            <article class="project-detail-card">
+                                <div class="project-meta">
+                                    <h4>Social Media Campaign Dashboard</h4>
+                                    <span class="project-year">2025</span>
+                                </div>
+                                <p>Developed an interactive Power BI dashboard to analyze social media campaign performance, 
+                                    providing insights into audience engagement, campaign reach, and marketing effectiveness 
+                                    through data visualization.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">PowerBi</span>
+                                </div>
+                                <ul class="project-features">
+                                    <li>Visualize campaign performance using interactive dashboards and charts.</li>
+                                    <li>Analyze campaign performance across multiple social media platforms.</li>
+                                </ul>
+                                <div class="skills-gained">
+                                    <span class="tech-tag tech-tag--skill">Data visualization and storytelling</span>
+                                    <span class="tech-tag tech-tag--skill">Data analysis and business intelligence</span>
+                                </div>
+                            </article>
+    
+                        </div>
+                    </section>
+    
+                    <!-- AWARDS & HONORS -->
+                    <section class="section-tight" id="awards">
+                        <h1>Awards &amp; Honors</h1>
+                        <div class="awards-grid">
+                            <div class="award-card">
+                                <span class="award-icon">🏆</span>
+                                <div>
+                                    <h4>Sunway ACE Scholarship</h4>
+                                    <p class="award-issuer">Jeffrey Cheah Foundation · 2025</p>
+                                </div>
+                            </div>
+                            <div class="award-card">
+                                <span class="award-icon">🎓</span>
+                                <div>
+                                    <h4>NCER Academic 2023 Awards Recipient</h4>
+                                    <p class="award-issuer">JUniversiti Teknologi MARA (UiTM) · 2024</p>
+                                </div>
+                            </div>
+                            <div class="award-card">
+                                <span class="award-icon">⭐</span>
+                                <div>
+                                    <h4>Dean's List Award</h4>
+                                    <p class="award-issuer">Sunway University · 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <!--footer-->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="../homepage.html"><img src="../images/Logo3.0.png" class="logo"></a>
+                <p>Quality Care, Naturally Gentle.</p>
+            </div>
+            <div class="footer_block">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="../team.html">Our Team</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                    <li><a href="../signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+            <div class="footer_block">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../reviews.html">Reviews</a></li>
+                    <li><a href="../booking.html">Book Now</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer_block">
+                <h4>Reach to Us</h4>
+                <ul>
+                    <li><a href="https://maps.app.goo.gl/HX3k16Foxzozwnq57">&#128197; Sunway University</a></li>
+                    <li><a href="#">&#128222; +60 12-345 6789</a></li>
+                    <li><a href="#">&#128338; Mon-Sat: 9am - 6pm</a></li>
+                </ul>
+                <div class="footer_socials">
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+                <p>&copy; 2026 Paw Paw Grooming. All rights reserved.</p>
+        </div>
+        
+    </footer>  
+    <script src="../javascript/nav.js"></script>
+</body>
+</html>

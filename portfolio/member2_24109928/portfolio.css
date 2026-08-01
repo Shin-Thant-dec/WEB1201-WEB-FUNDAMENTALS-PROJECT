@@ -1,0 +1,520 @@
+/*light mode color theme*/
+:root{
+    --card-bg-color: #f5eae0;
+    --portfolio-accent: #ff0044;
+    --portfolio-accent-2: #3F7A6B;
+    --portfolio-ink: #223027;
+    --portfolio-soft: #4C5B51;
+    --portfolio-border: #CFDBC9;
+    --portfolio-surface: #FBF8F2;
+    --button-1st-color:#4d2604;
+    --button-2nd-color:#F4D7B7;
+}
+
+body{
+    background-image: url(pictures/portfolio-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*dark mode color theme*/
+.darkmode{
+    --card-bg-color: #342A22;
+    background-image: url(pictures/portfolio-bg-darkmode.png);
+    --button-1st-color:#F4D7B7;
+    --button-2nd-color:#4d2604;
+
+    .education, .skill-row, .lang-name{
+        background-color: #1E1B18;
+    }
+}
+
+.team-button{
+    margin: 20px 0 20px 100px;
+}
+
+.team-button a{
+    text-decoration: none;
+    color: var(--button-1st-color);
+    transition: all 0.3s ;
+}
+
+.team-button a:hover{
+    border-bottom: 2px solid var(--button-1st-color);
+}
+/* ---- Use css grid to structure the web page---- */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+/* design the side bar*/
+.portfolio-sidebar {
+    display: flex;              /* Flexbox at the component level */
+    flex-direction: column;
+    gap: 24px;
+    position: sticky;
+    top: 110px;
+    left: 150px;
+}
+
+.portfolio-sidebar .profile {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: var(--portfolio-accent);
+    background-image: url(pictures/portfolio-photo.jpeg);
+    background-position: center;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 40px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+.portfolio-sidebar .profile:hover {
+    transform: rotate(-4deg) scale(1.03);
+}
+
+.cv-button {
+    background-color: var(--button-1st-color);
+    border-radius: 999px;
+    height: 2.5em;
+    width: auto;
+    transition: all 0.15s ease;
+}
+.cv-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 14px rgba(34, 48, 39, 0.35);
+}
+
+.cv-button a{
+    text-decoration: none;
+    color: var(--button-2nd-color);
+}
+
+.portfolio-tagline {
+    font-size: 14px;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+.sidebar-meta {
+    border-top: 2px solid var(--portfolio-border);
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.sidebar-meta p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    word-break: break-word;
+}
+.sidebar-meta i {
+    font-size: 20px;
+    font-weight: 600;
+    width: 16px;
+    text-align: center;
+}
+
+/* sidebar deisgn end*/ 
+
+/*prepare the structure of each info panel*/
+.section-tight{
+    margin: 60px auto;
+    max-width: 900px;
+}
+
+
+/* Bio*/
+.bio{
+    box-shadow: 0 10px 24px -14px rgba(34, 48, 39, 0.35);
+    background-color: var(--card-bg-color);
+    transition: transform 0.15s ease;
+    padding: 24px;
+    border-radius: 24px;
+}
+
+.bio:hover{
+    transform: translateY(-3px);
+}
+/* Education Timeline */
+.edu-timeline {
+    list-style: none;
+    position: relative;
+    margin-left: 6px;
+    padding-left: 28px;
+    border-left: 2px dashed var(--portfolio-border);
+}
+
+.edu-item {
+    position: relative;
+    padding-bottom: 24px;
+}
+.edu-item:last-child {
+    padding-bottom: 0;
+}
+
+.edu-marker {
+    position: absolute;
+    left: -35px;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--portfolio-surface);
+    border: 2px solid var(--portfolio-accent-2);
+    transition: transform 0.2s ease;
+  }
+.edu-item:hover .edu-marker {
+    transform: scale(1.5);
+}
+
+/* Highlight the current stage of education */
+.edu-item--current .edu-marker {
+    background-color: var(--portfolio-accent);
+    border-color: var(--portfolio-accent);
+}
+
+.edu-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+}
+.edu-heading h3 {
+    font-size: 17px;
+}
+.edu-year {
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.edu-institution {
+    font-style: italic;
+    margin: 2px 0 6px;
+}
+
+/* ---- Technical skills, use progress bar ---- */
+.skill-row {
+    margin-bottom: 16px;
+    transition: transform 0.2s ease;
+}
+.skill-row .skill-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.skill-bar {
+    height: 10px;
+    border-radius: 999px;
+    background-color: var(--portfolio-border);
+    overflow: hidden;
+}
+.skill-bar span {
+    display: block;
+    height: 100%;
+    border-radius: 999px;
+    background-image: linear-gradient(90deg, var(--portfolio-accent-2), var(--portfolio-accent));
+    animation: grow-bar 1.1s ease both;
+}
+
+/* Change the width of a progress bar with the CSS width property (from 0 to 100%):  */
+.w-50 { width: 50%; }
+.w-70 { width: 75%; }
+.w-75 { width: 75%; }
+.w-80 { width: 80%; }
+.w-85 { width: 85%; }
+
+.skill-row:hover{
+    transform: scale(1.02);
+}
+/* Technical skills end*/
+
+
+/* Language Proficiency — use nth-child property to fill the dot */
+.lang-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 10px 30px;
+}
+
+.lang-row {
+    display: grid;
+    grid-template-columns: 160px auto 90px;
+    align-items: center;
+    gap: 16px;
+    margin: 10px;
+}
+
+.lang-name {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.lang-dots {
+    display: flex;
+    gap: 6px;
+}
+.lang-dots span {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--portfolio-border);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.lang-row:hover .lang-dots span {
+    transform: scale(1.08);
+}
+
+/* Fill count driven purely by CSS, per proficiency level */
+.lang-dots.level-beginner span:nth-child(-n+2) {
+    background-image: linear-gradient(90deg, var(--portfolio-accent-2), var(--portfolio-accent));
+    background-color: transparent;
+}
+.lang-dots.level-fluent span:nth-child(-n+4) {
+    background-image: linear-gradient(90deg, var(--portfolio-accent-2), var(--portfolio-accent));
+    background-color: transparent;
+}
+.lang-dots.level-native span:nth-child(-n+5) {
+    background-image: linear-gradient(90deg, var(--portfolio-accent-2), var(--portfolio-accent));
+    background-color: transparent;
+}
+
+.lang-level {
+    font-size: 13px;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Past Project */
+.project-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+.project-detail-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 32px 24px 24px 40px;
+    box-shadow: 0 10px 24px -14px rgba(34, 48, 39, 0.35);
+    border-radius: 14px;
+    background-color: var(--card-bg-color);
+    transition: transform 0.5s ease
+}
+
+.project-detail-card:hover{
+    transform: scale(1.02);
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+    padding-right: 28px; /* keep clear of the stamp emoji */
+}
+.project-year {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--portfolio-accent-2);
+    white-space: nowrap;
+}
+
+.tech-tags,
+.skills-gained {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+.tech-tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background-color: var(--portfolio-border);
+    color: var(--portfolio-ink, var(--heading-color));
+}
+.tech-tag--skill {
+    background-color: transparent;
+    border: 1px solid var(--portfolio-accent-2);
+    color: var(--portfolio-accent-2);
+}
+
+.tech-tag--skill:hover{
+    color: var(--portfolio-accent);
+    border: 1px solid var(--portfolio-accent);
+}
+
+.project-role {
+    font-size: 13px;
+}
+
+.project-features {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 13px;
+}
+.project-features li {
+    margin-bottom: 4px;
+}
+
+/* Awards and Honors */
+.awards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.award-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--portfolio-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.award-card:hover {
+    transform: translateX(4px);
+    box-shadow: 0 8px 18px -12px rgba(34, 48, 39, 0.35);
+}
+.award-icon {
+    font-size: 26px;
+    flex-shrink: 0;
+}
+.award-card h4 {
+    font-size: 15px;
+}
+.award-issuer {
+    font-size: 12px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .portfolio-grid { grid-template-columns: 1fr; }
+  .portfolio-sidebar { position: static; }
+}
+
+/* Stack the new components on small screens */
+@media (max-width: 640px) {
+  .lang-row {
+    grid-template-columns: 110px auto 70px;
+    gap: 10px;
+  }
+  .edu-timeline {
+    padding-left: 22px;
+  }
+  .edu-marker {
+    left: -29px;
+  }
+}
+
+/* print stylesheet- remove all non-essential things, make all element look like a resume*/
+@media print {
+  /* Hide anything explicitly marked as non-print, plus the
+     interactive chrome that makes no sense on paper. */
+  .no-print,
+  .navbar,
+  .site-footer,
+  .cv-button,
+  #theme-switch,
+  .navbar-toggle,
+  .team-button {
+    display: none;
+  }
+
+  body {
+    background-color: #FFFFFF;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  /* Collapse the two-column layout into one readable column */
+  .portfolio-grid {
+    display: block;
+  }
+  .portfolio-sidebar {
+    position: static;
+    display: block;
+    margin-bottom: 24px;
+    page-break-after: avoid;
+  }
+  .portfolio-sidebar .profile {
+    width: 90px;
+    height: 90px;
+    font-size: 28px;
+    box-shadow: none;
+  }
+  .sidebar-meta {
+    border-top: 1px solid #000;
+  }
+
+  /* Flatten decorative colour/shadow so it prints cleanly on
+     any printer, including black & white */
+  .tag-card,
+  .award-card {
+    box-shadow: none !important;
+    border: 1px solid #999;
+    break-inside: avoid;
+  }
+  .tag-card::before,
+  .tag-card::after {
+    display: none;
+  }
+
+  .skill-bar span,
+  .lang-dots span,
+  .profile,
+  .edu-marker,
+  .award-card {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .skill-bar {
+    border: 1px solid #999;
+  }
+
+  .project-detail-grid,
+  .awards-grid {
+    display: block;
+  }
+  .project-detail-card,
+  .award-card {
+    margin-bottom: 14px;
+  }
+
+  section {
+    break-inside: avoid;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  h1, h2, h3, h4, p, span, li {
+    color: #000 !important;
+  }
+}
