@@ -96,9 +96,38 @@ transition:.3s;
     background-color: #EAF4FB;
 }
 
+#photo{
+    float:right;
+    width:300px;
+    margin-top:65px;
+    margin-right:280px;
+    margin-bottom:30px;
+    border-radius: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.photo:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
 #aboutme {
     grid: 4/5;
     background-color: #DCEEF8;
+}
+
+#family{
+    float:right;
+    margin-right:300px;
+    margin-top:65px;
+    height:300px;
+    border-radius: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#family:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
 #education {
@@ -204,110 +233,6 @@ transition:.3s;
     background-color: #B6D8EC;
 }
 
-
-#future_projects {
-    grid: 7/8;
-    background-color: #A8CEE5;
-}
-
-#cv {
-    grid: 8/9;
-    background-color: #DCEEF8;
-}
-
-#contact {
-    grid: 9/10;
-    background-color: #1E3A5F;
-    color: white;
-}
-
-
-
-#cv a{
-    display:block;
-    border:2px solid black;
-    width:fit-content;
-    padding:10px;
-    color:#06151b;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom:30px;
-    font-size:30px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-#cv a:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-}
-
-
-.photo{
-    float:right;
-    width:300px;
-    margin-top:65px;
-    margin-right:280px;
-    margin-bottom:30px;
-    border-radius: 20px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.photo:hover {
-    transform: scale(1.05) rotate(2deg);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
-
-h1{
-    margin-top:65px;
-    margin-left:50px;
-    text-decoration:underline;
-    font-size:45px;
-    transition: all 0.3s ease;
-}
-
-#introduction h2,
-#aboutme h2,
-#future_projects h2,
-#cv h2{
-  margin-left:60px;
-  font-size:30px;
-    transition: all 0.3s ease;
-
-}
-#education h2,
-#technical_skills h2
-{
-    margin-left:15px;
-    font-size:30px
-}
-
-#introduction ul,
-#aboutme ul{
-    margin-left:65px;
-    font-size:20px;
-    list-style-type:square;
-}
-
-
-#introduction p,
-#aboutme p,
-#future_projects p,
-#cv p{
-    margin-left: 75px;
-    margin-right:50px;
-    font-size:20px;
-    transition: all 0.3s ease;
-
-
-}
-#education p,
-#technical_skills p{
-    margin-left:20px;
-    margin-right:50px;
-    font-size:20px
-}
 .technical_skills_block{
     display:inline-block;
     width: 600px;
@@ -318,10 +243,6 @@ h1{
     transition: 0.35s;
 }
 
-.technical_skills_block:hover{
-transform:translateY(-10px);
-box-shadow:0 18px 30px rgba(0,0,0,.25);
-}
 
 .skill_progress{margin:20px 0;}
 .skill_info{
@@ -351,54 +272,53 @@ border-radius:20px;
 from{width:0;}
 }
 
-#future_projects table{
-    margin-left:auto;
-    margin-right:auto;
-    margin-bottom:30px
-    
+#futured_projects {
+    grid: 7/8;
+    background-color: #A8CEE5;
 }
-#future_projects caption{
-    text-decoration: underline;
-    font-size:25px;
+.futured_projects_block{
+    display:inline-block;
+    width: 600px;
+    border:2px solid #FFFF;
+    border-radius: 8px;
+    padding:20px;
+    border-radius: 40px;
+    transition: 0.35s;
 }
-#future_projects table,
-#future_projects th,
-#future_projects td{
-    border:1px solid white;
-    animation: float 3s ease-in-out infinite;   
-}
-.label{
-    font-weight:bold;
-    font-size:20px
-}
-#family{
-    float:right;
-    margin-right:300px;
-    margin-top:65px;
-    height:300px;
-    border-radius: 20px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+.futured_projects_block:hover{
+transform:translateY(-10px);
+box-shadow:0 18px 30px rgba(0,0,0,.25);
 }
 
-#family:hover {
-    transform: scale(1.05) rotate(2deg);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+#cv {
+    grid: 8/9;
+    background-color: #DCEEF8;
 }
-
-
-#block_align{
-    display:flex;
-    margin-left:40%;
-    margin-right:40%
-}
-#set_blocks{ display:flex;
-    flex-wrap:wrap;
-    flex-direction:center;
-    justify-content:center;
-    align-items:center;
-    gap:30px;
+#cv a{
+    display:block;
+    border:2px solid black;
+    width:fit-content;
+    padding:10px;
+    color:#06151b;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom:30px;
+    font-size:30px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
+#cv a:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+#contact {
+    grid: 9/10;
+    background-color: #1E3A5F;
+    color: white;
+}
+
 #contact h2{
     margin-left:60px;
     font-size:40px
@@ -445,6 +365,71 @@ from{width:0;}
     width:30px
 }
 
+h1{
+    margin-top:65px;
+    margin-left:50px;
+    text-decoration:underline;
+    font-size:45px;
+    transition: all 0.3s ease;
+}
+
+#introduction h2,
+#aboutme h2,
+#cv h2{
+  margin-left:60px;
+  font-size:30px;
+    transition: all 0.3s ease;
+
+}
+#education h2,
+#technical_skills h2,
+#futured_projects h2{
+    margin-left:15px;
+    font-size:30px
+}
+
+#introduction ul,
+#aboutme ul{
+    margin-left:65px;
+    font-size:20px;
+    list-style-type:square;
+}
+
+
+#introduction p,
+#aboutme p,
+#cv p{
+    margin-left: 75px;
+    margin-right:50px;
+    font-size:20px;
+    transition: all 0.3s ease;
+
+
+}
+#education p,
+#technical_skills p,
+#futured_projects p{
+    margin-left:20px;
+    margin-right:50px;
+    font-size:20px
+}
+
+
+.label{
+    font-weight:bold;
+    font-size:20px
+}
+
+
+.set_blocks{ display:flex;
+    flex-wrap:wrap;
+    flex-direction:center;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    margin-bottom:30px;
+}
+
 @media (max-width: 768px) {
 
     #navigation_bar {
@@ -481,7 +466,7 @@ from{width:0;}
 
     #introduction h2,
     #aboutme h2,
-    #future_projects h2,
+    #futured_projects h2,
     #cv h2,
     #education h2,
     #technical_skills h2 {
@@ -497,7 +482,7 @@ from{width:0;}
 
     #introduction p,
     #aboutme p,
-    #future_projects p,
+    #futured_projects p,
     #cv p,
     #education p,
     #technical_skills p {
@@ -512,7 +497,7 @@ from{width:0;}
     }
     
 
-    #future_projects table {
+    #futured_projects table {
         font-size: 14px;
         width: 95%;
     }
@@ -576,7 +561,7 @@ from{width:0;}
 
     #introduction h2,
     #aboutme h2,
-    #future_projects h2,
+    #futured_projects h2,
     #cv h2,
     #education h2,
     #technical_skills h2 {
@@ -594,7 +579,7 @@ from{width:0;}
 
     #introduction p,
     #aboutme p,
-    #future_projects p,
+    #futured_projects p,
     #cv p,
     #education p,
     #technical_skills p {
@@ -608,11 +593,11 @@ from{width:0;}
         padding: 10px;
     }
 
-    #future_projects table {
+    #futured_projects table {
         font-size: 10px;
     }
 
-    #future_projects caption {
+    #futured_projects caption {
         font-size: 16px;
     }
 
