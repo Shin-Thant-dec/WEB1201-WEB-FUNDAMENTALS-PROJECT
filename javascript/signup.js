@@ -30,12 +30,10 @@ owner_form.addEventListener('submit', (event) => {
 function getSignupFormErrors(firstname, lastname, email, password, repeatpassword) {
     let errors = []; 
     // classList.add('incorrect') addes the class 'incorrect' to the parent element
-    // needs to pair it with css to make it shows red border
-    // currently not working
     if (firstname === '' || firstname == null) {
         errors.push('Firstname is required');
         firstname_input.parentElement.classList.add('incorrect');
-    } else if (!/^[a-zA-Z]+$/.test(firstname)) {
+    } else if (!/^[a-zA-Z\s]+$/.test(firstname)) {
         errors.push('First name must only contain letters');
         if(firstname_input) firstname_input.parentElement.classList.add('incorrect');
     }
