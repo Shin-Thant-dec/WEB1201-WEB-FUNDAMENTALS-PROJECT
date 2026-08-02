@@ -2,24 +2,16 @@ html{scroll-behavior:smooth;}
 body{background-color:#a7d5e9;
     font-family: 'Poppins', sans-serif;
 margin:0;
+padding:0;
 }
-
+section{
+    min-height:1px;
+}
 .container{
-    display:grid;
-    grid-template-rows:
-                        auto
-                        auto
-                        auto
-                        auto
-                        auto
-                        auto
-                        auto
-                        auto;
-    grid-template-columns:1fr;
+    margin:0 auto;
+    padding:0
 }
-
 #main_nav{
-    grid:1/2;
     background:#4f556d;
     display:flex;
     flex-direction: row;
@@ -91,11 +83,21 @@ transition:.3s;
 
 
 
-#introduction {
-    grid: 3/4;
+#introduction{
     background-color: #EAF4FB;
 }
-
+#introduction_block{
+    display:inline-block;
+    width: 100%;
+    height:auto;
+}
+#introduction h1{
+    text-decoration:underline;
+    margin-top:60px;
+    margin-left:50px;
+    font-size:45px;
+    transition: all 0.3s ease;
+}
 #photo{
     float:right;
     width:300px;
@@ -112,14 +114,30 @@ transition:.3s;
 }
 
 #aboutme {
-    grid: 4/5;
     background-color: #DCEEF8;
+}
+#two_columns{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    height:1500px;
+}
+#aboutme{
+    grid-row:1/2;
+    grid-column:1/2;
+    overflow-y:auto;
+}
+#aboutme h1{
+    text-decoration:underline;
+    margin-top:50px;
+    margin-left:50px;
+    font-size:45px;
+    transition: all 0.3s ease;
+
 }
 
 #family{
-    float:right;
-    margin-right:300px;
-    margin-top:65px;
+    margin-left:50px;
     height:300px;
     border-radius: 20px;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -131,9 +149,19 @@ transition:.3s;
 }
 
 #education {
-    grid: 5/6;
-    display: inline-block;
+    grid-column:2/3;
+    grid-row:1/2;
     background-color: #C9E3F2;
+    display:inline-block;
+    overflow-y:auto;
+}
+#education h1{
+    text-decoration:underline;
+    margin-top:60px;
+    margin-left:100px;
+    font-size:45px;
+    transition: all 0.3s ease;
+
 }
 .timeline{
     position:relative;
@@ -229,10 +257,21 @@ transition:.3s;
 }
 
 #technical_skills {
-    grid: 6/7;
     background-color: #B6D8EC;
 }
+#technical_skills_templete_block{
+    display:inline-block;
+     width: 100%;
+    height:auto;
+}
 
+#technical_skills h1{
+    text-decoration:underline;
+    margin-top:60px;
+    margin-left:100px;
+    font-size:45px;
+    transition: all 0.3s ease;
+}
 .technical_skills_block{
     display:inline-block;
     width: 600px;
@@ -273,8 +312,20 @@ from{width:0;}
 }
 
 #futured_projects {
-    grid: 7/8;
     background-color: #A8CEE5;
+}
+#futured_projects_templete_block{
+    display:inline-block;
+     width: 100%;
+    height:auto;
+}
+
+#futured_projects h1{
+    text-decoration:underline;
+    margin-top:60px;
+    margin-left:100px;
+    font-size:45px;
+    transition: all 0.3s ease;
 }
 .futured_projects_block{
     display:inline-block;
@@ -291,8 +342,20 @@ box-shadow:0 18px 30px rgba(0,0,0,.25);
 }
 
 #cv {
-    grid: 8/9;
     background-color: #DCEEF8;
+}
+#cv_templete_block{
+    display:inline-block;
+     width: 100%;
+    height:auto;
+}
+
+#cv h1{
+    text-decoration:underline;
+    margin-top:60px;
+    margin-left:100px;
+    font-size:45px;
+    transition: all 0.3s ease;
 }
 #cv a{
     display:block;
@@ -314,11 +377,22 @@ box-shadow:0 18px 30px rgba(0,0,0,.25);
 }
 
 #contact {
-    grid: 9/10;
     background-color: #1E3A5F;
     color: white;
 }
+#contact_templete_block{
+    display:inline-block;
+     width: 100%;
+    height:auto;
+}
 
+#contact h1{
+    text-decoration:underline;
+    margin-top:60px;
+    margin-left:100px;
+    font-size:45px;
+    transition: all 0.3s ease;
+}
 #contact h2{
     margin-left:60px;
     font-size:40px
@@ -365,13 +439,7 @@ box-shadow:0 18px 30px rgba(0,0,0,.25);
     width:30px
 }
 
-h1{
-    margin-top:65px;
-    margin-left:50px;
-    text-decoration:underline;
-    font-size:45px;
-    transition: all 0.3s ease;
-}
+
 
 #introduction h2,
 #aboutme h2,
@@ -433,23 +501,12 @@ h1{
 /* ==========================
    TABLET (768px)
 ==========================*/
+/* ==========================
+   TABLET (768px)
+========================== */
 @media (max-width:768px){
 
-    h1{
-        font-size:34px;
-        margin-left:25px;
-    }
-
-    h2{
-        font-size:26px !important;
-    }
-
-    p,
-    li{
-        font-size:18px !important;
-    }
-
-    /* Top navigation */
+    /* Navigation */
     #main_nav{
         flex-wrap:wrap;
         padding:10px;
@@ -460,7 +517,6 @@ h1{
         padding:10px;
     }
 
-    /* Sticky navigation */
     #navigation_bar{
         justify-content:center;
         flex-wrap:wrap;
@@ -470,6 +526,18 @@ h1{
     #navigation_bar a{
         font-size:17px;
         margin:5px;
+    }
+
+    /* Two-column becomes one-column */
+    #two_columns{
+        grid-template-columns:1fr;
+        height:auto;
+    }
+
+    #aboutme,
+    #education{
+        grid-column:1;
+        grid-row:auto;
     }
 
     /* Images */
@@ -482,7 +550,28 @@ h1{
         margin:30px auto;
     }
 
-    /* Text spacing */
+    /* Headings */
+    #introduction h1,
+    #aboutme h1,
+    #education h1,
+    #technical_skills h1,
+    #futured_projects h1,
+    #cv h1,
+    #contact h1{
+        font-size:34px;
+        margin-left:25px;
+    }
+
+    h2{
+        font-size:26px !important;
+    }
+
+    /* Text */
+    p,
+    li{
+        font-size:18px !important;
+    }
+
     #introduction p,
     #aboutme p,
     #cv p,
@@ -495,16 +584,6 @@ h1{
         margin-right:25px;
     }
 
-    /* Timeline */
-    .timeline{
-        margin-left:10px;
-        padding-left:25px;
-    }
-
-    .timeline-card{
-        width:90%;
-    }
-
     /* Cards */
     .technical_skills_block,
     .futured_projects_block,
@@ -512,55 +591,27 @@ h1{
         width:90%;
     }
 
-    /* Contact */
-    #contact h2,
-    #contact p,
-    #contact li{
-        margin-left:25px;
+    .timeline-card{
+        width:90%;
     }
-
-    .contact_icon{
-        width:25px;
-    }
-
 }
 /* ==========================
    MOBILE (320px)
-==========================*/
+========================== */
 @media (max-width:320px){
 
     body{
         overflow-x:hidden;
     }
 
-    h1{
-        font-size:26px;
-        margin:25px 15px;
-    }
-
-    h2{
-        font-size:20px !important;
-        margin-left:15px !important;
-    }
-
-    p,
-    li{
-        font-size:15px !important;
-        line-height:1.6;
-    }
-
-    /* Navigation */
-
     #main_nav{
         flex-direction:column;
-        gap:0;
     }
 
     #main_nav a{
         width:100%;
         text-align:center;
         font-size:17px;
-        padding:12px;
     }
 
     #navigation_bar{
@@ -575,8 +626,19 @@ h1{
         font-size:15px;
     }
 
-    /* Images */
+    /* One-column layout */
+    #two_columns{
+        grid-template-columns:1fr;
+        height:auto;
+    }
 
+    #aboutme,
+    #education{
+        grid-column:1;
+        grid-row:auto;
+    }
+
+    /* Images */
     #photo,
     #family{
         float:none;
@@ -585,7 +647,29 @@ h1{
         margin:20px auto;
     }
 
+    /* Headings */
+    #introduction h1,
+    #aboutme h1,
+    #education h1,
+    #technical_skills h1,
+    #futured_projects h1,
+    #cv h1,
+    #contact h1{
+        font-size:26px;
+        margin:25px 15px;
+    }
+
+    h2{
+        font-size:20px !important;
+        margin-left:15px !important;
+    }
+
     /* Text */
+    p,
+    li{
+        font-size:15px !important;
+        line-height:1.6;
+    }
 
     #introduction p,
     #aboutme p,
@@ -599,7 +683,6 @@ h1{
     }
 
     /* Timeline */
-
     .timeline{
         margin-left:5px;
         padding-left:18px;
@@ -621,7 +704,6 @@ h1{
     }
 
     /* Cards */
-
     .technical_skills_block,
     .futured_projects_block,
     .contact_block{
@@ -630,20 +712,7 @@ h1{
         border-radius:20px;
     }
 
-    /* Contact */
-
-    #contact h2,
-    #contact p,
-    #contact li{
-        margin-left:15px;
-    }
-
-    .contact_icon{
-        width:22px;
-    }
-
-    /* Progress bar */
-
+    /* Progress bars */
     .skill_info{
         font-size:15px;
     }
@@ -653,10 +722,8 @@ h1{
     }
 
     /* CV button */
-
     #cv a{
         font-size:20px;
         padding:10px 18px;
     }
-
 }
