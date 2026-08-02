@@ -40,7 +40,7 @@ function getSignupFormErrors(firstname, lastname, email, password, repeatpasswor
 
     // optional, only runs when last name has numeric
     if (lastname !== '' && lastname != null) {
-        if (!/^[a-zA-Z]+$/.test(lastname)) {
+        if (!/^[a-zA-Z\s]+$/.test(lastname)) {
             errors.push('Last name must only contain letters');
             if(lastname_input) lastname_input.parentElement.classList.add('incorrect');
         }
