@@ -355,6 +355,23 @@ box-shadow:0 18px 30px rgba(0,0,0,.25);
     font-size:45px;
     transition: all 0.3s ease;
 }
+#cv h1{
+    text-decoration:underline;
+    margin-top:60px;
+    margin-left:75px;
+    font-size:45px;
+    transition: all 0.3s ease;
+}
+#cv h2{
+    margin-left:95px;
+    font-size:35px;
+    transition: all 0.3s ease;
+}
+#cv p{
+    margin-left:120px;
+    font-size:20px; 
+    transition: all 0.3s ease;
+}
 #cv a{
     display:block;
     border:2px solid black;
@@ -440,8 +457,7 @@ box-shadow:0 18px 30px rgba(0,0,0,.25);
 
 
 #introduction h2,
-#aboutme h2,
-#cv h2{
+#aboutme h2{
   margin-left:60px;
   font-size:30px;
     transition: all 0.3s ease;
@@ -463,8 +479,7 @@ box-shadow:0 18px 30px rgba(0,0,0,.25);
 
 
 #introduction p,
-#aboutme p,
-#cv p{
+#aboutme p{
     margin-left: 75px;
     margin-right:50px;
     font-size:20px;
