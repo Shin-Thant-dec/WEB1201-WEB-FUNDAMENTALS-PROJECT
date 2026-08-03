@@ -13,8 +13,8 @@
     --bg-light: hsl(0, 0%, 10%);
     --text: hsl(0, 0%, 90%);
     --text-muted: hsl(0, 0%, 70%);
-    --clickable: #ff6b6b;
-    --accent: #a29bfe;
+    --accent: #ff6b6b;
+    --clickable: #00FFFF;
     
     --border: 1px solid hsl(0, 0%, 30%);
 
@@ -243,6 +243,13 @@ span.date{
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.hover-animation {
+    transition: scale 1s ease;
+}
+.hover-animation:hover {
+    transform: scale(1.1);
 }
 
 .project-card, .experience {
