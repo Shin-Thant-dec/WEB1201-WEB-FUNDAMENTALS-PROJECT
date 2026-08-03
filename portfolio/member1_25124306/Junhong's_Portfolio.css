@@ -18,6 +18,7 @@ section{
     align-items: center;
     justify-content:center;
     gap:10px;
+    width:100%;
 }
 #main_nav a{
     color:white;
@@ -35,7 +36,7 @@ section{
     bottom:5px;          
     width:0;
     height:2px;
-    background:white;     
+    background:rgb(41, 40, 40);     
     transition:width 0.3s ease;
 }
 
@@ -43,11 +44,7 @@ section{
     width:100%;
 }
 
-
-
 #navigation_bar {
-    display:grid;
-    grid: 2/4;
     display: flex;
     flex-direction:row;
     background-color: #1E3A5F;
@@ -126,6 +123,7 @@ transition:.3s;
     grid-row:1/2;
     grid-column:1/2;
     overflow-y:auto;
+    width:100%
 }
 #aboutme h1{
     text-decoration:underline;
@@ -154,6 +152,7 @@ transition:.3s;
     background-color: #C9E3F2;
     display:inline-block;
     overflow-y:auto;
+    width:100%;
 }
 #education h1{
     text-decoration:underline;
@@ -497,157 +496,179 @@ box-shadow:0 18px 30px rgba(0,0,0,.25);
     gap:30px;
     margin-bottom:30px;
 }
+/* ===================== */
+/* Tablet & Mobile: 768px */
+/* ===================== */
+@media (max-width: 768px) {
 
-/* ==========================
-   TABLET (768px)
-==========================*/
-/* ==========================
-   TABLET (768px)
-========================== */
-@media (max-width:768px){
-
-    /* Navigation */
-    #main_nav{
-        flex-wrap:wrap;
-        padding:10px;
+    
+    #main_nav {
+        flex-direction: column;
+        gap: 0;
     }
-
     #main_nav a{
-        font-size:20px;
+        font-size:18px;
         padding:10px;
+        color:black;
     }
 
-    #navigation_bar{
-        justify-content:center;
-        flex-wrap:wrap;
-        padding:15px;
+    #navigation_bar {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
     }
-
     #navigation_bar a{
-        font-size:17px;
-        margin:5px;
+        font-size:14px;
+        margin-right:8px;
+        margin-bottom:5px;
     }
 
-    /* Two-column becomes one-column */
-    #two_columns{
-        grid-template-columns:1fr;
-        height:auto;
+    /* Introduction */
+    #introduction h1{
+        margin-left:20px;
+        font-size:32px;
     }
-
-    #aboutme,
-    #education{
-        grid-column:1;
-        grid-row:auto;
+    #introduction h2,
+    #aboutme h2,
+    #cv h2{
+        margin-left:20px;
+        font-size:22px;
     }
-
-    /* Images */
-    #photo,
-    #family{
+    #introduction ul,
+    #aboutme ul{
+        margin-left:20px;
+        font-size:16px;
+    }
+    #introduction p,
+    #aboutme p,
+    #cv p{
+        margin-left:20px;
+        margin-right:20px;
+        font-size:16px;
+    }
+    #photo{
         float:none;
         display:block;
-        width:260px;
-        height:auto;
-        margin:30px auto;
+        margin:20px auto;
+        width:200px;
     }
 
-    /* Headings */
-    #introduction h1,
-    #aboutme h1,
-    #education h1,
-    #technical_skills h1,
-    #futured_projects h1,
-    #cv h1,
-    #contact h1{
-        font-size:34px;
-        margin-left:25px;
-    }
-
-    h2{
-        font-size:26px !important;
-    }
-
-    /* Text */
-    p,
-    li{
-        font-size:18px !important;
-    }
-
-    #introduction p,
-    #aboutme p,
-    #cv p,
-    #education p,
-    #technical_skills p,
-    #futured_projects p,
-    #introduction ul,
-    #aboutme ul{
-        margin-left:25px;
-        margin-right:25px;
-    }
-
-    /* Cards */
-    .technical_skills_block,
-    .futured_projects_block,
-    .contact_block{
-        width:90%;
-    }
-
-    .timeline-card{
-        width:90%;
-    }
-}
-/* ==========================
-   MOBILE (320px)
-========================== */
-@media (max-width:320px){
-
-    body{
-        overflow-x:hidden;
-    }
-
-    #main_nav{
-        flex-direction:column;
-    }
-
-    #main_nav a{
-        width:100%;
-        text-align:center;
-        font-size:17px;
-    }
-
-    #navigation_bar{
-        flex-direction:column;
-        align-items:center;
-        position:relative;
-        padding:10px;
-    }
-
-    #navigation_bar a{
-        margin:6px 0;
-        font-size:15px;
-    }
-
-    /* One-column layout */
+    /* About Me / Education - stack the grid */
     #two_columns{
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
         height:auto;
     }
-
     #aboutme,
     #education{
-        grid-column:1;
-        grid-row:auto;
+        grid-column: 1/2;
+        width:100%;
     }
-
-    /* Images */
-    #photo,
+    #aboutme h1,
+    #education h1{
+        margin-left:20px;
+        font-size:32px;
+    }
     #family{
-        float:none;
-        width:90%;
+        margin-left:20px;
+        width:calc(100% - 40px);
         height:auto;
-        margin:20px auto;
     }
 
-    /* Headings */
+    .timeline{
+        margin-left:10px;
+        padding-left:25px;
+    }
+    .timeline-card{
+        width:100%;
+    }
+    .circle{
+        margin-left:-25px;
+        margin-right:10px;
+        width:20px;
+        height:20px;
+    }
+
+    /* Technical Skills & Projects */
+    #technical_skills h1,
+    #futured_projects h1,
+    #cv h1,
+    #contact h1{
+        margin-left:20px;
+        font-size:32px;
+    }
+    .technical_skills_block,
+    .futured_projects_block{
+        width:90%;
+    }
+    #education p,
+    #technical_skills p,
+    #futured_projects p{
+        margin-left:10px;
+        margin-right:10px;
+        font-size:16px;
+    }
+
+    /* CV */
+    #cv a{
+        font-size:22px;
+    }
+
+    /* Contact */
+    #contact h1{
+        margin-left:20px;
+        font-size:32px;
+        color:black;
+    }
+    #contact h2{
+        margin-left:20px;
+        font-size:28px;
+         color:black;
+    }
+    #contact p{
+        margin-left:20px;
+        font-size:16px;
+        color:black;
+    }
+    #contact a{
+        font-size:16px;
+        color:black;
+    }
+    #contact li{
+        color:black;
+        margin-left:20px;
+    }
+    .contact_block{
+        width:90%;
+    }
+    #main_nav,
+    #introduction_block,
+    #aboutme,
+    #education,
+    #technical_skills_templete_block,
+    #futured_projects_templete_block,
+    #cv_templete_block,
+    #contact_templete_block{
+        overflow-x:hidden;
+        margin:0;
+        background-color:#a7d5e9;
+    }
+}
+
+
+/* ===================== */
+/* Small Mobile: 320px    */
+/* ===================== */
+@media (max-width: 320px) {
+
+    #main_nav a{
+        font-size:14px;
+        padding:8px;
+    }
+    #navigation_bar a{
+        font-size:11px;
+        margin-right:5px;
+    }
+
     #introduction h1,
     #aboutme h1,
     #education h1,
@@ -655,75 +676,90 @@ box-shadow:0 18px 30px rgba(0,0,0,.25);
     #futured_projects h1,
     #cv h1,
     #contact h1{
-        font-size:26px;
-        margin:25px 15px;
+        margin-left:10px;
+        font-size:24px;
     }
-
-    h2{
-        font-size:20px !important;
-        margin-left:15px !important;
+    #introduction h2,
+    #aboutme h2,
+    #cv h2{
+        margin-left:10px;
+        font-size:18px;
     }
-
-    /* Text */
-    p,
-    li{
-        font-size:15px !important;
-        line-height:1.6;
-    }
-
+    #introduction ul,
+    #aboutme ul,
     #introduction p,
     #aboutme p,
-    #cv p,
-    #education p,
-    #technical_skills p,
-    #futured_projects p,
-    #introduction ul,
-    #aboutme ul{
-        margin:15px;
+    #cv p{
+        margin-left:10px;
+        margin-right:10px;
+        font-size:14px;
+    }
+    #photo{
+        width:150px;
+    }
+    #family{
+        margin-left:10px;
+        width:calc(100% - 20px);
     }
 
-    /* Timeline */
     .timeline{
         margin-left:5px;
-        padding-left:18px;
+        padding-left:20px;
     }
-
-    .timeline::before{
-        left:8px;
-    }
-
     .circle{
-        width:18px;
-        height:18px;
-        margin-left:-24px;
+        margin-left:-20px;
+        margin-right:8px;
+        width:16px;
+        height:16px;
     }
-
     .timeline-card{
-        width:92%;
-        padding:15px;
+        padding:12px;
     }
 
-    /* Cards */
     .technical_skills_block,
-    .futured_projects_block,
-    .contact_block{
-        width:95%;
-        padding:15px;
-        border-radius:20px;
+    .futured_projects_block{
+        width:100%;
+        padding:12px;
+    }
+    #education p,
+    #technical_skills p,
+    #futured_projects p{
+        margin-left:5px;
+        margin-right:5px;
+        font-size:14px;
     }
 
-    /* Progress bars */
-    .skill_info{
-        font-size:15px;
-    }
-
-    .progress{
-        height:14px;
-    }
-
-    /* CV button */
     #cv a{
+        font-size:16px;
+        padding:8px;
+    }
+
+    #contact h2{
+        margin-left:10px;
         font-size:20px;
-        padding:10px 18px;
+    }
+    #contact p,
+    #contact li{
+        margin-left:10px;
+        font-size:14px;
+        color:black;
+    }
+    .contact_block{
+        width:100%;
+    }
+    .contact_icon{
+        width:22px;
+    }
+    #main_nav,
+    #introduction_block,
+    #aboutme,
+    #education,
+    #technical_skills_templete_block,
+    #futured_projects_templete_block,
+    #cv_templete_block,
+    #contact_templete_block{
+        overflow-x:hidden;
+        margin:0;
+        background-color:#a7d5e9;
     }
 }
