@@ -175,7 +175,6 @@ transition:.3s;
     top:14px;
     bottom:0;
     width:4px;
-    z-index:1;
     background:linear-gradient(#1E3A5F,#4FC3F7);
 }
 
@@ -573,7 +572,16 @@ box-shadow:0 18px 30px rgba(0,0,0,.25);
         width:calc(100% - 40px);
         height:auto;
     }
-
+    .timeline::before{
+    content:"";
+    position:absolute;
+    left:10px;
+    top:14px;
+    bottom:0;
+    width:4px;
+    z-index:1;
+    background:linear-gradient(#1E3A5F,#4FC3F7);
+    }
     .timeline{
         margin-left:10px;
         padding-left:25px;
@@ -587,7 +595,7 @@ box-shadow:0 18px 30px rgba(0,0,0,.25);
         width:20px;
         height:20px;
     }
-
+  
     /* Technical Skills & Projects */
     #technical_skills h1,
     #futured_projects h1,
@@ -728,7 +736,16 @@ box-shadow:0 18px 30px rgba(0,0,0,.25);
         margin-right:5px;
         font-size:14px;
     }
-
+    .timeline::before{
+    content:"";
+    position:absolute;
+    left:7px;
+    top:14px;
+    bottom:0;
+    width:4px;
+    z-index:1;
+    background:linear-gradient(#1E3A5F,#4FC3F7);
+    }
     #cv a{
         font-size:16px;
         padding:8px;
