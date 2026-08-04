@@ -92,16 +92,18 @@ p, span, li{
 }
 
 .logo{
-    height: 70px;
-    height:3em;
+    width: 12vw;
+    max-width: 120px;
+    max-width: 200px;
 }
 
 .navbar-container .navbar-menu {
     display:flex;
     text-align: center;
-    gap: 1em;
+    gap: 3vw;
     list-style: none;
     align-items: center;
+    flex-shrink: 1;
 }
 
 .navbar-container .navbar-menu li a{
@@ -109,7 +111,7 @@ p, span, li{
     color: var(--navbar-footer-text);
     font-size: 1.3em;
     font-weight: 500;
-    padding: 3px 20px;
+    padding: 3px 0;
     border: 2px solid transparent;
     transition: all 0.7s ease;
     white-space: nowrap;
@@ -235,6 +237,10 @@ p, span, li{
         padding: 5rem 1.5rem;
         box-shadow: 0 10px 10px rgba(0,0,0,0.5);
         background-color: var(--navbar-footer-bg-color);
+    }
+
+    .logo{
+        width: 200px;
     }
 
     .navbar-container .navbar-menu.active{
