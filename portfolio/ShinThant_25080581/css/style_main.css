@@ -208,6 +208,7 @@ span.date{
     border-radius: 1rem;
     color: var(--text-muted);
     padding: 0.5rem 1rem;
+    max-height: fit-content;
     max-width: fit-content;
 }
 
@@ -478,6 +479,7 @@ span.skill-name, .skill-percentage {
     .edu-card, .skill-card {
         margin-bottom: 2rem
     }
+
 
 }
 
