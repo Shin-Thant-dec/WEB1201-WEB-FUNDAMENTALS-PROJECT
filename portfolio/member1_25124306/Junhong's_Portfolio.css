@@ -94,7 +94,7 @@ transition:.3s;
     font-size:45px;
     transition: all 0.3s ease;
 }
-#photo{
+.photo{
     float:right;
     width:300px;
     margin-top:65px;
@@ -132,17 +132,6 @@ transition:.3s;
 
 }
 
-#family{
-    margin-left:50px;
-    height:300px;
-    border-radius: 20px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-#family:hover {
-    transform: scale(1.05) rotate(2deg);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
 
 #education {
     grid-column:2/3;
@@ -269,7 +258,7 @@ transition:.3s;
 }
 .technical_skills_block{
     display:inline-block;
-    width: 600px;
+    width: 40%;
     border:1px solid #FFFF;
     border-radius: 8px;
     padding:20px;
@@ -395,6 +384,7 @@ box-shadow:0 18px 30px rgba(0,0,0,.25);
     height:auto;
 }
 
+
 #contact h1{
     text-decoration:underline;
     margin-top:60px;
@@ -442,8 +432,14 @@ box-shadow:0 18px 30px rgba(0,0,0,.25);
     border:2px solid black;
     gap:30px;
     border-radius: 40px;
-
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
+.contact_block:hover {
+    transform: scale(1) translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
 .contact_icon{
     width:30px
 }
@@ -505,9 +501,9 @@ box-shadow:0 18px 30px rgba(0,0,0,.25);
     margin-bottom:30px;
 }
 /* ===================== */
-/* Mobile: 768px */
+/* Mobile: 767px */
 /* ===================== */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     
     #main_nav {
@@ -554,11 +550,17 @@ box-shadow:0 18px 30px rgba(0,0,0,.25);
         margin-right:20px;
         font-size:16px;
     }
-    #photo{
+    .photo{
         float:none;
         display:block;
         margin:20px auto;
-        width:200px;
+        width:300px;
+         transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .photo:hover {
+        transform: scale(1.05) rotate(2deg);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
     }
 
     /* About Me / Education - stack the grid */
@@ -582,10 +584,8 @@ box-shadow:0 18px 30px rgba(0,0,0,.25);
         margin-left:20px;
         font-size:32px;
     }
-    #family{
-        margin-left:20px;
-        width:200px;
-        height:auto;
+    #aboutme h2{
+        font-size:22px;
     }
     .timeline::before{
     content:"";
@@ -721,15 +721,10 @@ box-shadow:0 18px 30px rgba(0,0,0,.25);
         margin-right:10px;
         font-size:15px;
     }
-    #photo{
+    .photo{
         width:25%;
     }
-    #family{
-        height:20%;
-        width:200px;
-        float:left;
-        margin-right:50px;
-    }
+
     #two_columns{
         display:grid;
         grid-template-columns: 1fr;
