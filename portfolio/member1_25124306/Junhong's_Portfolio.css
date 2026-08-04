@@ -351,13 +351,6 @@ box-shadow:0 18px 30px rgba(0,0,0,.25);
 #cv h1{
     text-decoration:underline;
     margin-top:60px;
-    margin-left:100px;
-    font-size:45px;
-    transition: all 0.3s ease;
-}
-#cv h1{
-    text-decoration:underline;
-    margin-top:60px;
     margin-left:75px;
     font-size:45px;
     transition: all 0.3s ease;
@@ -365,12 +358,10 @@ box-shadow:0 18px 30px rgba(0,0,0,.25);
 #cv h2{
     margin-left:95px;
     font-size:35px;
-    transition: all 0.3s ease;
 }
 #cv p{
     margin-left:120px;
-    font-size:20px; 
-    transition: all 0.3s ease;
+    font-size:20px;    
 }
 #cv a{
     display:block;
@@ -569,12 +560,22 @@ box-shadow:0 18px 30px rgba(0,0,0,.25);
 
     /* About Me / Education - stack the grid */
     #two_columns{
+        /*display:flex;
+        flex-direction:column;*/
+        display:grid;
         grid-template-columns: 1fr;
-        height:auto;
+        grid-template-rows: auto auto;
+
     }
-    #aboutme,
+    #aboutme{
+        grid-row:1/2;
+        grid-column:1/2;
+        width:100%;
+    }
+
     #education{
-        grid-column: 1/2;
+        grid-row:2/3;
+        grid-column:1/2;
         width:100%;
     }
     #aboutme h1,
@@ -584,7 +585,7 @@ box-shadow:0 18px 30px rgba(0,0,0,.25);
     }
     #family{
         margin-left:20px;
-        width:calc(100% - 40px);
+        width:200px;
         height:auto;
     }
     .timeline::before{
@@ -722,7 +723,7 @@ box-shadow:0 18px 30px rgba(0,0,0,.25);
     }
     #family{
         margin-left:10px;
-        width:calc(100% - 20px);
+        width:200px;
     }
 
     .timeline{
